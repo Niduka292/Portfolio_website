@@ -1,0 +1,15 @@
+# Node modules
+backend/node_modules/
+frontend/node_modules/
+
+# Logs
+*.log
+
+# Environment variables
+backend/.env
+
+# VS Code
+.vscode/
+
+# MacOS
+.DS_Store
