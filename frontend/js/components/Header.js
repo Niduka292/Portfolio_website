@@ -1,11 +1,17 @@
 const Header = {
     template: `
         <header>
-            <h1 class="header-name">Niduka Jayathunga</h1>
-            <nav>
-                <a href="#about">About</a> &nbsp;
-                <a href="#contact">Contact</a>
-            </nav>
+            <div class="header">
+                <h3 class="header-name">Niduka</h3>
+                <div class="nav-bar">
+                    <nav>
+                        <a href="#about">About</a> &nbsp;
+                        <a href="#projects">Projects</a>&nbsp;
+                        <a href="#contact">Contact</a>
+                    </nav>
+                </div>
+            </div>
+            
         </header>
     `
 }

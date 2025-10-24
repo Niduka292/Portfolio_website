@@ -1,7 +1,10 @@
 const Projects = {
 
     template : `
-        <p>Portfolio Showcase</p>
+        <div class="projects">
+            <p>Portfolio Showcase</p>
+        </div>
+        
     `
 }
 

@@ -1,7 +1,7 @@
 const Footer ={
 
     template:`
-        <p>&#169; 2025 Niduka. All Rights reserved</p>
+        <p class="footer">&#169; 2025 Niduka. All Rights reserved</p>
     `
 }
 

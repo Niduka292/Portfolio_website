@@ -1,17 +1,194 @@
 body{
-    background-color: rgb(0, 13, 33);
+    background-color: rgb(0, 9, 21);
     margin: 0;
-    font-family: "Poppins", sans-serif;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    display: block;
 }
 
 p{
-    color: rgb(157, 0, 224);
+    color: rgb(141, 141, 141);
 }
 
 .header-name{
-    color: aliceblue;
-    width: 450px;
-    margin-top: 25px;
-    margin-left: 15px;
-    box-shadow: 2px 2px rgb(255, 71, 255);
+    background: -webkit-linear-gradient(rgb(5, 217, 118), rgb(4, 110, 240));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: 250px;
+    margin-top: 19px;
+    margin-left: 18px;
+    font-size: 19px;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+.about, 
+.projects,
+ .contact{
+    height: 350px;
+    margin-left: 10px;
+}
+
+.footer{
+    text-align: center;
+}
+
+.about-me{
+    color: azure;
+    margin-bottom: 20px;
+}
+
+.header{
+    display: flex;
+    margin-bottom: 5px;
+    width: 1450px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-bar{
+    margin-top: 0px;
+}
+
+.about-line-1 
+,.about-line-2{
+    font-size: 65px;
+    margin: 0px;
+    margin-left: 90px;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    font-weight: 700;
+}
+
+.role-text{
+    margin-left: 94px;
+    margin-top: 7px;
+    margin-bottom: 50px;
+    font-size: 18px;
+    color: rgb(141, 141, 141);
+}
+
+.about-line-1{
+    margin-top: 55px;
+    color: white;
+    text-shadow: 1px 1px 55px rgb(55, 137, 137);
+}
+
+
+
+.about-line-2{
+    background: -webkit-linear-gradient(rgb(5, 217, 118), rgb(4, 110, 240));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 1px 1px 55px rgb(55, 137, 137);
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+a:hover
+,.a:active{
+    text-shadow: 2px 2px 22px rgb(64, 143, 160);
+    font-weight: 500;
+}
+
+.a-button-contact,
+.a-button-projects{
+    width: 50px;
+    padding: 8px 14px;
+    border: 1px outset rgb(100, 235, 235);
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 1px 1px 40px rgb(26, 109, 101);
+
+}
+
+.a-button-contact:hover,
+.a-button-projects:hover,
+.a-button-linkedin img:hover,
+.a-button-github img:hover,
+.a-button-insta img:hover
+{
+    box-shadow: 2px 2px 40px rgb(96, 237, 237);
+    text-shadow: 0px 0px 20px rgb(71, 224, 229);
+}
+
+.a-button-projects{
+    margin-left: 100px;
+}
+
+.a-button-linkedin img{
+    margin-left: 95px;
+}
+
+.a-button-github img,
+.a-button-insta img{
+    margin-left: 35px;
+}
+
+.a-button-linkedin img,
+.a-button-github img,
+.a-button-insta img{
+    width: 28px;
+    height: auto;
+    margin-top: 10px;
+    padding: 6px 6px;
+    border: 1px outset rgb(100, 235, 235);
+    border-radius: 8px;
+    box-shadow: 0px 0px 30px rgb(28, 95, 88);
+}
+
+.about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 85px;
+}
+
+.img-div img{
+    width: 180px;
+    height: auto;
+    float: right;
+}
+
+.about-me-div{
+    text-align: center;
+}
+
+.about-me-title{
+    font-size: 50;
+    font-weight: 700;
+    background: -webkit-linear-gradient(rgb(5, 217, 118), rgb(4, 110, 240));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-me-content{
+    width: 650px;
+    margin-left: 55px;
+    margin-top: 80px;
+    font-size: 22;
+    text-align: justify;
+    color: white;
+    font-weight: 500;
+}
+
+.about-me-headers{
+    margin-left: 85px;
+    font-size: 50;
+    font-weight: 500;
+}
+
+.about-me-header-1{
+    background: -webkit-linear-gradient(rgb(5, 217, 118), rgb(4, 110, 240));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    height: 55px;
+    margin-bottom: 0px;
+}
+
+.about-me-header-2{
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 10px;
 }

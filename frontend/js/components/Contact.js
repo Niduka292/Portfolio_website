@@ -1,7 +1,10 @@
 const Contact = {
 
     template:`
-        <p>Contact Me</p>
+        <div class="contact">
+            <p>Contact Me</p>
+        </div>
+        
     `
 }
 
