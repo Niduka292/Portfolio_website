@@ -22,7 +22,7 @@ const Header = {
 
                     <br><br><br>
 
-                    <a class="a-button-linkedin" href="www.linkedin.com/in/niduka-jayathunga-3a73a9348"><img src="./assets/linkedin-logo.png"/></a>
+                    <a class="a-button-linkedin" href="https://linkedin.com/in/niduka-jayathunga"><img src="./assets/linkedin-logo.png"/></a>
 
                     <a class="a-button-github" href="https://github.com/Niduka292"><img src="./assets/github-logo.png"/></a>
 

@@ -115,7 +115,7 @@ const Projects = {
                             <p>&#128230;</p>
                         </div>
                         <div class="projects-header-2">
-                            <p>Teck Stack</p>
+                            <p>Tech Stack</p>
                         </div>
                     </div>
                 </div>

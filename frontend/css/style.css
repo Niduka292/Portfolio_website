@@ -10,7 +10,7 @@ p{
 }
 
 .header-name{
-    background: -webkit-linear-gradient(rgb(5, 217, 118), rgb(4, 110, 240));
+    background: -webkit-linear-gradient(rgb(0, 255, 183), rgb(4, 75, 240));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     width: 250px;
@@ -24,6 +24,10 @@ p{
  .contact{
     height: 350px;
     margin-left: 10px;
+}
+
+.contact{
+    height: 850px;
 }
 
 .footer{
@@ -71,7 +75,7 @@ p{
 }
 
 .about-line-2{
-    background: -webkit-linear-gradient(rgb(5, 217, 118), rgb(4, 110, 240));
+    background: -webkit-linear-gradient(rgb(5, 217, 203), rgb(4, 110, 240));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 1px 1px 55px rgb(55, 137, 137);
@@ -161,7 +165,7 @@ a:hover
 .section-title p{
     font-size: 50;
     font-weight: 700;
-    background: -webkit-linear-gradient(rgb(5, 217, 118), rgb(4, 110, 240));
+    background: -webkit-linear-gradient(rgb(0, 255, 55), rgb(4, 102, 240));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center;
@@ -205,7 +209,7 @@ a:hover
 }
 
 .about-me-header-1{
-    background: -webkit-linear-gradient(rgb(5, 217, 118), rgb(4, 110, 240));
+    background: -webkit-linear-gradient(rgb(0, 242, 255), rgb(4, 102, 240));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     height: 55px;
@@ -258,9 +262,9 @@ a:hover
 
 .section-intro p{
     text-align: center;
-    font-size: 17;
+    font-size: 16.5;
     margin: 0px;
-    font-weight: 200;
+    font-weight: 400;
     margin-bottom: 20px;
 }
 
@@ -320,7 +324,7 @@ a:hover
 }
 
 .projects-header-1 p{
-    background: -webkit-linear-gradient(rgb(5, 217, 118), rgb(4, 110, 240));
+    background: -webkit-linear-gradient(rgb(0, 255, 55), rgb(4, 102, 240));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 500;
@@ -490,4 +494,59 @@ a:hover
 .tech-stack-row{
     justify-content: baseline;
     margin-inline-start: 185px;
+}
+
+.contact-section-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 90px;
+}
+
+.connect-with-me{
+    height: 500px;
+    width: 400px;
+    background-color: rgba(160, 169, 199, 0.089);
+    border-radius: 15px;
+}
+
+.connect-with-me-title{
+    margin: 5px;
+}
+
+.connect-with-me-title p{
+    font-weight: 600;
+    font-size: 25;
+    background: -webkit-linear-gradient(rgb(91, 192, 232), rgb(7, 119, 170));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 15px;
+    margin-top: 30px;
+}
+
+.contact-me-section{
+    height: 500px;
+    width: 750px;
+    background-color: rgba(160, 169, 199, 0.089);
+    border-radius: 15px;
+}
+
+.contact-me-title{
+    background: -webkit-linear-gradient(rgb(0, 213, 255), rgb(4, 102, 240));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-size: 34px;
+    margin: 20px 25px
+}
+
+.linkedin-btn-image img{
+    width: 20px;
+    height: auto;
+}
+
+.connect-linkedin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
