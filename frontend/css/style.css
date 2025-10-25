@@ -19,8 +19,7 @@ p{
     font-size: 19px;
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
 }
-
-.about, 
+ 
 .projects,
  .contact{
     height: 350px;
@@ -71,8 +70,6 @@ p{
     text-shadow: 1px 1px 55px rgb(55, 137, 137);
 }
 
-
-
 .about-line-2{
     background: -webkit-linear-gradient(rgb(5, 217, 118), rgb(4, 110, 240));
     -webkit-background-clip: text;
@@ -88,19 +85,19 @@ a{
 
 a:hover
 ,.a:active{
-    text-shadow: 2px 2px 22px rgb(64, 143, 160);
+    text-shadow: 0px 0px 22px rgb(64, 143, 160);
     font-weight: 500;
 }
 
 .a-button-contact,
 .a-button-projects{
     width: 50px;
-    padding: 8px 14px;
-    border: 1px outset rgb(100, 235, 235);
-    border-radius: 8px;
+    padding: 5px 16px;
+    border: 1.5px outset rgb(4, 61, 97);
+    border-radius: 12px;
     text-decoration: none;
-    box-shadow: 1px 1px 40px rgb(26, 109, 101);
-
+    box-shadow: 0px 0px 30px rgb(19, 51, 63);
+    background-color: rgba(6, 6, 30, 0.833);
 }
 
 .a-button-contact:hover,
@@ -109,8 +106,15 @@ a:hover
 .a-button-github img:hover,
 .a-button-insta img:hover
 {
-    box-shadow: 2px 2px 40px rgb(0, 238, 255);
-    text-shadow: 0px 0px 20px rgb(71, 224, 229);
+    box-shadow: 0px 0px 80px rgb(45, 129, 170);
+    border-color:rgb(11, 143, 143);
+    text-shadow: none;
+}
+
+.a-button-linkedin img:hover,
+.a-button-github img:hover,
+.a-button-insta img:hover{
+    box-shadow: 0px 0px 45px rgb(53, 142, 187);
 }
 
 .a-button-projects{
@@ -133,16 +137,15 @@ a:hover
     height: auto;
     margin-top: 10px;
     padding: 6px 6px;
-    border: 1px outset rgb(100, 235, 235);
     border-radius: 8px;
-    box-shadow: 0px 0px 30px rgb(28, 95, 88);
+    box-shadow: 0px 0px 30px rgb(10, 49, 83);
 }
 
 .about{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 85px;
+    margin-bottom: 15px;
 }
 
 .img-div img{
@@ -262,59 +265,73 @@ a:hover
 }
 
 .projects-section{
-    height: 1800px;
+    height: 2000px;
 }
 
 .projects,
 .tech-stack,
 .projects-title-div{
-    border: 1.5px solid rgb(1, 108, 108);
+    border: 1.5px solid;
     margin: 30px;
     border-radius: 13px;
+}
+
+.projects-title-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .projects,
 .tech-stack{
     margin-top: 70px;
-    background-color: rgba(0, 11, 28, 0.783);
+    background-color: rgba(1, 8, 20, 0.783);
     height: 500px;
     align-items: center;
-}
-
-.projects{
     height: 1050px;
     width: 1330px;
     margin-left: 85px;
+}
 
+.tech-stack{
+    height: 700px;
 }
 
 .projects-title-div{
     width: 1210px;
     text-align: center;
-    background-color: rgba(1, 12, 30, 0.783);
+    background-color: rgba(1, 8, 19, 0.783);
     border-radius: 13px;
     margin-left: 60px;
-    box-shadow: 0px 0px 10px rgb(4, 91, 91);
 }
 
-.projects-title-div:hover{
-    box-shadow: 0px 0px 15px rgb(4, 91, 91);
+.project-title-container{
+    border: 1.5px solid rgb(0, 70, 108);
+    padding: 0px 30px;
+}
+
+.project-title-container{
+    box-shadow: 0px 0px 5px rgb(3, 116, 157);
+    border-radius: 10px;
+}
+
+.project-title-container p{
+    margin: 8px 225px;
 }
 
 .projects-header-1 p{
     background: -webkit-linear-gradient(rgb(5, 217, 118), rgb(4, 110, 240));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    margin-bottom: 0px;
     font-weight: 500;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .projects-header-2 p{
     color: white;
     margin-top: 0px;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 19px;
 }
 
 .project-cards-container{
@@ -324,7 +341,7 @@ a:hover
 .project-cards-row{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: baseline;
     align-items: center;
     max-width: 1450px;
 }
@@ -334,7 +351,7 @@ a:hover
 .project-card-3{
     border: 2px solid rgb(2, 77, 104);
     height: 400px;
-    background-color: rgba(12, 37, 52, 0.712);
+    background-color: rgba(9, 25, 35, 0.712);
     border-radius: 13px;
     margin-left: 5px;
     margin-right: 5px;
@@ -360,8 +377,12 @@ a:hover
 .project-card-2:hover,
 .project-card-3:hover
 {
-    border-color: rgb(3, 194, 194);
-    box-shadow: 0px 0px 220px rgb(32, 99, 99);
+    background-color:  rgba(24, 27, 41, 0.712);
+    box-shadow: 0px 0px 80px rgb(6, 87, 128);
+    border-color:rgb(7, 111, 111); 
+    animation-name: animationPop;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
 }
 
 .project-image img{
@@ -419,3 +440,54 @@ a:hover
     box-shadow: 0px 0px 13px rgb(0, 103, 103);
 }
 
+.tech-stack-row{
+    display: flex;
+}
+
+.tech-stack-component{
+    border: 1.5px solid rgb(0, 70, 108);
+    height: 160px;
+    width: 140px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+.tech-stack-component img{
+    height: 100px;
+    width: auto;
+    border-radius: 80px;
+    margin: 10px;
+}
+
+.tech-stack-image{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 5px;
+}
+
+.tech-stack-component:hover{
+    box-shadow: 0px 0px 50px rgb(6, 87, 128);
+    border-color:rgb(11, 143, 143);
+    animation-name: animationPop;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.tech-stack{
+    height: 600px;
+    margin-left: 0px;
+    margin-top: 120px;
+}
+.tech-stack-name p{
+    text-align: center;
+    margin: 0px;
+}
+
+.tech-stack-row{
+    justify-content: baseline;
+    margin-inline-start: 185px;
+}

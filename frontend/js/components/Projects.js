@@ -13,12 +13,14 @@ const Projects = {
 
             <div class="projects">
                 <div class="projects-title-div">
-                    <div class="projects-header-1">
+                    <div class="project-title-container">
+                        <div class="projects-header-1">
                             <p><></p>
                         </div>
                         <div class="projects-header-2">
                             <p>Projects</p>
                         </div>
+                    </div>
                 </div>
                 <div class="project-cards-container">
                     <div class="project-cards-row">
@@ -60,11 +62,11 @@ const Projects = {
                             </div>
                             <div class="project-text">
                                 <div class="project-title">
-                                    <p>To Do List</p>
+                                    <p>Wine Analysis </p>
                                 </div>
                                 <div class="project-description">
                                     <p>
-                                        Simple to-do list application built using Javascript and css as a learning project. 
+                                        Data analysing and visualization project built using Python,NLP and Dash
                                     </p><br>
                                 </div>
                                 <a class="view-details">View Details &#8594;</a>
@@ -86,18 +88,105 @@ const Projects = {
                                 </div>
                                 <a class="view-details">View Details &#8594;</a>
                             </div>
-                        </div>                     
+                        </div>    
+                        <div class="project-card-2">
+                            <div class="project-image">
+                                <img src="./assets/project-5-pic.png"></img>
+                            </div>
+                            <div class="project-text">
+                                <div class="project-title">
+                                    <p>To Do List</p>
+                                </div>
+                                <div class="project-description">
+                                    <p>
+                                        Simple to-do list application built using Javascript and css as a learning project. 
+                                    </p><br>
+                                </div>
+                                <a class="view-details">View Details &#8594;</a>
+                            </div>                 
                     </div>
 
                 </div>
             </div><br>
             <div class=tech-stack>
                 <div class="projects-title-div">
-                    <div class="projects-header-1">
-                        <p>&#128230;</p>
+                    <div class="project-title-container">
+                        <div class="projects-header-1">
+                            <p>&#128230;</p>
+                        </div>
+                        <div class="projects-header-2">
+                            <p>Teck Stack</p>
+                        </div>
                     </div>
-                    <div class="projects-header-2">
-                        <p>Teck Stack</p>
+                </div>
+                <div class="tech-stack-container">
+                    <div class="tech-stack-row">
+                        <div class="tech-stack-component">
+                            <div class="tech-stack-image">
+                                <img src="./assets/java.png"></img>
+                            </div>
+                            <div class="tech-stack-name">
+                                <p>Java</p>
+                            </div>
+                        </div>
+                        <div class="tech-stack-component">
+                            <div class="tech-stack-image">
+                                <img src="./assets/python.png"></img>
+                            </div>
+                            <div class="tech-stack-name">
+                                <p>Python</p>
+                            </div>
+                        </div>
+                        <div class="tech-stack-component">
+                            <div class="tech-stack-image">
+                                <img src="./assets/javascript.png"></img>
+                            </div>
+                            <div class="tech-stack-name">
+                                <p>Javascript</p>
+                            </div>
+                        </div>
+                        <div class="tech-stack-component">
+                            <div class="tech-stack-image">
+                                <img src="./assets/css.png"></img>
+                            </div>
+                            <div class="tech-stack-name">
+                                <p>CSS</p>
+                            </div>
+                        </div>
+                        <div class="tech-stack-component">
+                            <div class="tech-stack-image">
+                                <img src="./assets/c.png"></img>
+                            </div>
+                            <div class="tech-stack-name">
+                                <p>C</p>
+                            </div>
+                        </div>
+                        <div class="tech-stack-component">
+                            <div class="tech-stack-image">
+                                <img src="./assets/nodejs.png"></img>
+                            </div>
+                            <div class="tech-stack-name">
+                                <p>Node JS</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tech-stack-row">
+                        <div class="tech-stack-component">
+                            <div class="tech-stack-image">
+                                <img src="./assets/react.png"></img>
+                            </div>
+                            <div class="tech-stack-name">
+                                <p>React JS</p>
+                            </div>
+                        </div>
+                        <div class="tech-stack-component">
+                            <div class="tech-stack-image">
+                                <img src="./assets/html.png"></img>
+                            </div>
+                            <div class="tech-stack-name">
+                                <p>HTML</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
