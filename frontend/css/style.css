@@ -109,7 +109,7 @@ a:hover
 .a-button-github img:hover,
 .a-button-insta img:hover
 {
-    box-shadow: 2px 2px 40px rgb(96, 237, 237);
+    box-shadow: 2px 2px 40px rgb(0, 238, 255);
     text-shadow: 0px 0px 20px rgb(71, 224, 229);
 }
 
@@ -155,28 +155,50 @@ a:hover
     text-align: center;
 }
 
-.about-me-title{
+.section-title p{
     font-size: 50;
     font-weight: 700;
     background: -webkit-linear-gradient(rgb(5, 217, 118), rgb(4, 110, 240));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 00px;
+    padding-top: 90px;
+}
+
+.about-me-text{
+    display: block;
 }
 
 .about-me-content{
-    width: 650px;
-    margin-left: 55px;
-    margin-top: 80px;
-    font-size: 22;
-    text-align: justify;
-    color: white;
-    font-weight: 500;
+    width: 1450px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
 }
+
+.about-me-para{
+    margin-left: 85px;
+    margin-top: 40px;
+    text-align: justify;
+    width: 650px;  
+    position: relative;
+}
+
+.about-me-para p{
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+    font-size: 22;
+    margin-left: 10px;
+    
+}
+
 
 .about-me-headers{
     margin-left: 85px;
     font-size: 50;
-    font-weight: 500;
+    font-weight: 620;
 }
 
 .about-me-header-1{
@@ -191,4 +213,49 @@ a:hover
     color: white;
     margin-top: 0px;
     margin-bottom: 10px;
+}
+
+.profile-pic img{
+    width: 350px;
+    height: auto;
+    float: right;
+    margin-right: 50px;
+    border-radius: 180px;
+    box-shadow: 0px 0px 2500px rgb(39, 130, 130);
+}
+
+.profile-pic{
+    position: relative;
+}
+
+.profile-pic img:hover{
+    box-shadow: 0px 0px 2500px rgb(45, 142, 142);
+}
+
+.profile-pic:hover{
+    animation-name: animationPop;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animationUpDown{
+    from {bottom: 0px;}
+    to {bottom: 70px;}
+}
+
+@keyframes animationRightToLeft{
+    from {right: 0px;}
+    to {right: 70px;}
+}
+
+@keyframes animationPop{
+    from {transform: scale(1);}
+    to {transform: scale(1.02);}
+}
+
+.section-intro p{
+    text-align: center;
+    font-size: 17;
+    margin: 0px;
+    font-weight: 200;
 }
