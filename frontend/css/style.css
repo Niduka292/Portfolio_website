@@ -540,13 +540,114 @@ a:hover
     margin: 20px 25px
 }
 
-.linkedin-btn-image img{
+.linkedin-btn img{
     width: 20px;
     height: auto;
 }
 
-.connect-linkedin{
+.connect-linkedin,
+.connect-insta,
+.connect-github{
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 0.2px solid rgb(129, 129, 129);
+    background-color: rgba(120, 128, 148, 0.155);
+    border-radius: 10px;
+    width: 320px;
+    height: 65px;
+    margin-left: 35px;
+    margin-top: 35px;
+    position: relative;
+    transition: transform 0.4s ease;
+}
+
+.connect-with-me-component{
+    display: flex;
+    height: 65px;
+    width: 320px;
+    justify-content: baseline;
+    margin-left: 25px;
+}
+
+.connect-linkedin:hover{
+    animation-name: animationPop;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.connect-linkedin::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, #8ebae0a1 10%, transparent 70%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.connect-linkedin:hover::after {
+  animation: spread 0.6s ease-out forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes spread {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.1;
+    background-color: #67aacc;
+    border-radius: 280px;
+  }
+  50% {
+    width: 90%;
+    height: 90%;
+    opacity: 0.5;
+    border-radius: 10px;
+
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    opacity: 0.25;
+    background-color: #6ea1c1;
+  }
+}
+
+.connect-with-me-text{
+    justify-content: baseline;
+    margin: 10px 0px;
+    margin-left: 10px;
+    width: 200px;
+}
+
+.connect-with-me-text p{
+    line-height: 1.5rem;
+    margin: 0px 2px;
+    text-shadow: none;
+}
+
+.connect-component-line-1{
+    font-size: 20px;
+    font-weight: 700;
+    color: aliceblue;
+
+}
+
+.connect-component-line-2{
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(164, 164, 164);
+
+}
+
+.connect-with-me-component img{
+    width: 35px;
+    height: 35px;
+    margin-top: 15px;
+    margin-left: 10px;
 }
