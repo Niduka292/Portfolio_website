@@ -12,6 +12,7 @@ const Header = {
                 </div>
             </div>
             <div class="about-me">
+                <div class="about-me-elements">
                     <p class="about-line-1">Enthusiastic</p>
                     <p class="about-line-2">Developer</p>
 
@@ -28,7 +29,13 @@ const Header = {
 
                     <a class="a-button-insta" href="https://www.instagram.com/niduka_065_"><img src="./assets/insta-logo.png"/></a>
                 </div>
-                <div class="section-title">
+                <div class="demo-vid">
+                    <video width="320" height="240" autoplay loop muted playsinline>
+                        <source src="./assets/demo-vid.mp4" type="video/mp4"/>
+                    </video>
+                </div>
+            </div>
+            <div class="section-title">
                 <p>About Me</p>
             </div>
             <div class="section-intro">
