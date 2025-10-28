@@ -1,14 +1,30 @@
-const express = require("express");
-const mongoose = require("mongoose");
-const cors = require("cors");
-const contactRoutes = require("./routes/contact");
+import express from "express";
+import path from "path";
+import dotenv from "dotenv";
+import mongoose from "mongoose";
+import cors from "cors";
+import { fileURLToPath } from "url";
+import contactRoutes from "./routes/contact.js";
+
+dotenv.config();
 
 const PORT = 3000;
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 var app = express();
 app.use(express.json());
 app.use(cors());
 app.use("/contact",contactRoutes);
+
+// Serve static frontend
+app.use(express.static(path.join(__dirname, "../frontend")));
+
+// Serve default route
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../frontend/index.html"));
+});
 
 mongoose.connect("mongodb://127.0.0.1:27017/portfoliio_db")
 .then(function(){
