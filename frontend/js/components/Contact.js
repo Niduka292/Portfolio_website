@@ -3,7 +3,8 @@ const Contact = {
         return{
             name:"",
             email:"",
-            message:""
+            message:"",
+            successMsg:""
 
         }
     },
@@ -82,7 +83,7 @@ const Contact = {
                         </div>
                     </div>
                     <div class="contact-me-form">
-                        <form @submi.prevent="submitForm">
+                        <form @submit.prevent="submitForm">
                             <div class="contact-name">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi-bi-person" viewBox="0 0 16 16">
                                     <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 

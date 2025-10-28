@@ -4,6 +4,8 @@ const Message = require("../models/message");
 
 router.post("/",async (req, res) => {
     try{
+        console.log("Received POST /contact:", req.body); 
+
         const {name, email, message} = req.body;
         const msg = new Message({name, email, message});
         await msg.save();

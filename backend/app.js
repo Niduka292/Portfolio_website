@@ -1,10 +1,14 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
+const contactRoutes = require("./routes/contact");
 
 const PORT = 3000;
-var app = express();
 
+var app = express();
 app.use(express.json());
+app.use(cors());
+app.use("/contact",contactRoutes);
 
 mongoose.connect("mongodb://127.0.0.1:27017/portfoliio_db")
 .then(function(){

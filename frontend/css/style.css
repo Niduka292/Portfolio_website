@@ -870,3 +870,15 @@ a:hover
 .send-message:hover{
     box-shadow: 0px 5px 12px #083f49;
 }
+
+.success-msg{
+    font-weight: 500;
+    font-size: 17px;
+    margin-left: 4px;
+    margin-top: 0px;
+    color: #267887;
+}
+
+.contact-me-form form{
+    margin-bottom: 8px;
+}
