@@ -13,6 +13,10 @@ body{
 p{
   color: rgb(141, 141, 141);
 }
+.header{
+  margin-left: 35px;
+  flex-direction: row;
+}
 .header-name{
   background: -webkit-linear-gradient(rgb(0, 255, 183), rgb(4, 75, 240));
   -webkit-background-clip: text;
@@ -111,8 +115,12 @@ a{
 }
 a:hover,
 .a:active{
-  text-shadow: 0px 0px 22px rgb(64, 143, 160);
+  text-shadow: 0px 0px 22px rgb(27, 190, 215);
   font-weight: 500;
+}
+.buttons-line-1,
+.buttons-line-2{
+  flex-direction: row;
 }
 .a-button-contact,
 .a-button-projects{
@@ -321,18 +329,13 @@ a:hover,
 .project-cards-container{
   max-width: 100%;
 }
-.project-cards-row{
+.project-cards-row {
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  align-items: stretch;
-  max-width: 100%;
-  flex-wrap: wrap;
-  gap: 20px;
+  gap: 1.5rem;
+  flex-wrap: wrap; 
 }
-.project-card-1,
-.project-card-2,
-.project-card-3{
+.project-card{
   border: 2px solid rgb(2, 77, 104);
   min-height: 400px;
   background-color: rgba(9, 25, 35, 0.712);
@@ -340,16 +343,14 @@ a:hover,
   width: 100%;
   max-width: 350px;
   margin: 10px;
+  flex: 1 1 calc(33.33% - 1.5rem);
+  transition: transform 0.2s ease;
 }
-.project-card-1,
-.project-card-2,
-.project-card-3{
+.project-card{
   margin-left: 0;
   margin-right: 0;
 }
-.project-card-1:hover,
-.project-card-2:hover,
-.project-card-3:hover{
+.project-card:hover{
   background-color: rgba(24, 27, 41, 0.712);
   box-shadow: 0px 0px 80px rgb(6, 87, 128);
   border-color:rgb(7, 111, 111);
@@ -390,6 +391,7 @@ a:hover,
   margin-right: 5px;
   margin-top: 5px;
   font-size: 16px;
+  height: 68px;
 }
 .view-details{
   margin-left: 15px;
@@ -398,6 +400,16 @@ a:hover,
   padding: 8px 12px;
   display: inline-block;
   margin-top: 10px;
+}
+.view-details svg{
+  width: 12px;
+  height: auto;
+  margin-top: 6px;
+  margin-left: 5px;
+}
+.view-details span{
+  font-size: medium;
+  margin-bottom: 5px;
 }
 .view-details:hover{
   cursor: pointer;
@@ -916,8 +928,8 @@ a:hover,
 /* Mobile devices */
 @media screen and (max-width: 768px) {
   .header {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row;
+    text-align: left;
   }
   .header-name {
     margin: 10px auto;
@@ -934,7 +946,7 @@ a:hover,
   }
   .about-line-1,
   .about-line-2 {
-    font-size: 40px;
+    font-size: 60px;
     margin-left: 20px;
     text-align: center;
   }
@@ -967,7 +979,10 @@ a:hover,
     padding-top: 50px;
   }
   .about-me-para p {
-    font-size: 18px;
+    font-size: 16px;
+    max-width: 620px;
+    margin-left: 0px;
+
   }
   .profile-pic img {
     max-width: 250px;
@@ -1011,6 +1026,10 @@ a:hover,
   .connect-github {
     max-width: 100%;
   }
+
+  .about-me-content{
+    padding-left: 0px;
+  }
 }
 /* Small mobile devices */
 @media screen and (max-width: 480px) {
@@ -1024,10 +1043,12 @@ a:hover,
     margin-left: 10px;
   }
   .section-title p {
-    font-size: 28px;
+    font-size: 26px;
   }
   .about-me-para p {
-    font-size: 16px;
+    font-size: 10px;
+    margin-left: 0px;
+
   }
 }
 
@@ -1038,17 +1059,6 @@ a:hover,
    - Adjust tech-stack images for small screens
    =========================== */
 
-/* 1) Basic dropdown button and dropdown list for mobile.
-   You'll need minimal HTML like:
-   <div class="nav-bar">
-     <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">Menu</button>
-     <nav id="nav-menu" class="nav-menu">
-       <a href="#about">About</a>
-       <a href="#projects">Projects</a>
-       <a href="#contact">Contact</a>
-     </nav>
-   </div>
-*/
 .nav-toggle {
   display: none; /* visible only on mobile via media query */
   background-color: rgba(6, 6, 30, 0.9);
@@ -1154,12 +1164,12 @@ a:hover,
     padding: 6px;
   }
   .tech-stack-component img {
-    height: 64px; /* reduced from 100px */
-    margin: 6px auto;
+    height: 74px; /* reduced from 100px */
+    margin: 14px auto;
     display: block;
   }
   .tech-stack-name p {
-    font-size: 12px;
+    font-size: 15px;
     word-break: break-word;
     padding: 0 6px;
     line-height: 1.15;
@@ -1177,5 +1187,101 @@ a:hover,
   }
   .tech-stack-name p {
     font-size: 11px;
+  }
+}
+
+.project-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+
+/* -------------------------------
+   Header and Nav Bar Styling
+--------------------------------*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  background-color: rgb(0, 9, 21);
+  color: white;
+  margin-left: 0px;
+}
+
+.header-name p{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Base navigation menu */
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav-menu a:hover {
+  color: rgb(0, 186, 253);
+  text-shadow: #15b0df;
+}
+
+/* The menu toggle button (hamburger icon) */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+/* -------------------------------
+   Responsive Design (Mobile)
+--------------------------------*/
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block; /* Show hamburger icon */
+  }
+
+  .nav-menu {
+    display: none; /* Hide menu by default */
+    flex-direction: column;
+    background-color: rgba(0, 9, 21, 0.95);
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 225, 255, 0.2);
+  }
+
+  .nav-menu.open {
+    display: flex; /* Show when toggled */
+    animation: fadeInMenu 0.3s ease forwards;
+  }
+
+  .nav-menu a {
+    padding: 10px 0;
+    text-align: right;
+    font-size: 1.1rem;
+  }
+}
+
+/* Smooth open animation */
+@keyframes fadeInMenu {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
