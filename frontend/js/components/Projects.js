@@ -39,7 +39,7 @@ const Projects = {
                                         Desktop-based Airplane Ticket Booking Management System developed using JavaFX, Java and PostgreSQL.
                                     </p>
                                 </div>
-                                <a class="view-details">View Details &#8594;</a>
+                                <a class="view-details" href="./projects/airplane-ticket-booking.html">View Details &#8594;</a>
                             </div>
                         </div>
                         <div class="project-card-2">
