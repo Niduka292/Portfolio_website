@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Food Ordering System - Project Details</title>
+    <link rel="stylesheet" href="../css/projects.css">
+</head>
+<body>
+    <div class="project-detail-container">
+        <!-- Header Section -->
+        <div class="project-header">
+            <a href="../index.html" class="back-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                </svg>
+                Back to Portfolio
+            </a>
+            <h1 class="project-title">Online Food Ordering System</h1>
+            <p class="project-subtitle">A Java-based Food Ordering Management System with Advanced Data Structures</p>
+        </div>
+
+        <!-- Project Overview -->
+        <div class="project-content">
+            <section class="project-section-1">
+                <div class="project-section-text">
+                    <h2 class="section-heading">Project Overview</h2>
+                    <p class="section-text">
+                        The Online Food Ordering System is a simplified console-based application designed to simulate 
+                        restaurant order management. Built entirely in Java, this system demonstrates the practical 
+                        implementation of various data structures including LinkedList, ArrayDeque, PriorityQueue, and Stack. 
+                        The project showcases efficient order processing with priority handling, dynamic menu management, 
+                        and comprehensive reporting capabilities.
+                    </p>
+                </div>
+                <!-- Project Image -->
+                <div class="project-image-section">
+                    <img src="../assets/online-food-ordering.png" alt="Online Food Ordering System" class="main-project-image">
+                </div>
+            </section>
+
+            <!-- Key Features -->
+            <section class="project-section">
+                <h2 class="section-heading">Key Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                            </svg>
+                        </div>
+                        <h3>Dynamic Menu Management</h3>
+                        <p>Add, remove, and edit menu items dynamically using LinkedList for flexible data management</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3.854 2.146a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 3.293l1.146-1.147a.5.5 0 0 1 .708 0m0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708L2 7.293l1.146-1.147a.5.5 0 0 1 .708 0m0 4a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0"/>
+                            </svg>
+                        </div>
+                        <h3>Priority Order Processing</h3>
+                        <p>Handle normal orders via FIFO queue and premium orders with PriorityQueue for efficient service</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z"/>
+                                <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466"/>
+                            </svg>
+                        </div>
+                        <h3>Undo Functionality</h3>
+                        <p>Revert the most recent action using Stack-based implementation for error recovery</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5zm8 0A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5zm-8 8A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5zm8 0A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5z"/>
+                            </svg>
+                        </div>
+                        <h3>Custom Merge Sort</h3>
+                        <p>Implemented custom sorting algorithms for efficient data organization and reporting</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M4 11H2v3h2zm5-4H7v7h2zm5-5v12h-2V2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1z"/>
+                            </svg>
+                        </div>
+                        <h3>End-of-Day Reports</h3>
+                        <p>Generate comprehensive reports with total bills and popular items sorted by frequency</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022zm2.004.45a7 7 0 0 0-.985-.299l.219-.976q.576.129 1.126.342zm1.37.71a7 7 0 0 0-.439-.27l.493-.87a8 8 0 0 1 .979.654l-.615.789a7 7 0 0 0-.418-.302zm1.834 1.79a7 7 0 0 0-.653-.796l.724-.69q.406.429.747.91zm.744 1.352a7 7 0 0 0-.214-.468l.893-.45a8 8 0 0 1 .45 1.088l-.95.313a7 7 0 0 0-.179-.483m.53 2.507a7 7 0 0 0-.1-1.025l.985-.17q.1.58.116 1.17zm-.131 1.538q.05-.254.081-.51l.993.123a8 8 0 0 1-.23 1.155l-.964-.267q.069-.247.12-.501m-.952 2.379q.276-.436.486-.908l.914.405q-.24.54-.555 1.038zm-.964 1.205q.183-.183.35-.378l.758.653a8 8 0 0 1-.401.432z"/>
+                                <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0z"/>
+                                <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5"/>
+                            </svg>
+                        </div>
+                        <h3>Performance Logging</h3>
+                        <p>Runtime execution tracking using System.nanoTime() for performance analysis</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technologies Used -->
+            <section class="project-section">
+                <h2 class="section-heading">Technologies & Data Structures</h2>
+                <div class="tech-stack-list">
+                    <div class="tech-item">
+                        <div class="tech-badge">Java</div>
+                        <p>Core programming language for application logic</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-badge">LinkedList</div>
+                        <p>Dynamic menu item management with flexible insertions and deletions</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-badge">ArrayDeque</div>
+                        <p>FIFO queue implementation for normal order processing</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-badge">PriorityQueue</div>
+                        <p>Custom comparator-based priority handling for premium orders</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-badge">Deque (Stack)</div>
+                        <p>Undo functionality implementation using stack operations</p>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-badge">Merge Sort</div>
+                        <p>Custom sorting algorithm for reports and analytics</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Challenges & Solutions -->
+            <section class="project-section">
+                <h2 class="section-heading">Challenges & Solutions</h2>
+                <div class="challenge-item">
+                    <h3 class="challenge-title">Priority Queue Management</h3>
+                    <p class="challenge-text">
+                        <strong>Challenge:</strong> Implementing an efficient system that prioritizes premium customer 
+                        orders while ensuring normal orders are not indefinitely delayed. The system needed to balance 
+                        fair service with priority handling.<br><br>
+                        <strong>Solution:</strong> Utilized Java's PriorityQueue with a custom Comparator to assign 
+                        priority levels to orders. Premium orders were given higher priority values, ensuring they were 
+                        served first while normal orders were processed through a separate FIFO ArrayDeque to maintain 
+                        order fairness.
+                    </p>
+                </div>
+                <div class="challenge-item">
+                    <h3 class="challenge-title">Undo Action Implementation</h3>
+                    <p class="challenge-text">
+                        <strong>Challenge:</strong> Creating a reliable undo mechanism that could revert various types 
+                        of actions (add, remove, edit menu items, and serve orders) while maintaining data consistency.<br><br>
+                        <strong>Solution:</strong> Implemented a Stack-based (Deque) command pattern where each action 
+                        was stored as an object containing the action type and relevant data. The undo operation would 
+                        pop the last action and execute its reverse operation, ensuring proper state restoration.
+                    </p>
+                </div>
+                <div class="challenge-item">
+                    <h3 class="challenge-title">Custom Sorting Algorithm</h3>
+                    <p class="challenge-text">
+                        <strong>Challenge:</strong> Efficiently sorting completed orders by total bill amount and menu 
+                        items by popularity without using built-in Java sorting methods, as per project constraints.<br><br>
+                        <strong>Solution:</strong> Implemented custom Merge Sort algorithm with O(n log n) time complexity. 
+                        Created separate comparator logic for different sorting criteria (bill amount and sales frequency), 
+                        with performance logging using System.nanoTime() to verify efficiency.
+                    </p>
+                </div>
+                <div class="challenge-item">
+                    <h3 class="challenge-title">Data Structure Selection</h3>
+                    <p class="challenge-text">
+                        <strong>Challenge:</strong> Choosing the most appropriate data structure for each functionality 
+                        while adhering to project constraints that limited available data structures.<br><br>
+                        <strong>Solution:</strong> Carefully analyzed the operations required for each feature. Used 
+                        LinkedList for menu items (frequent additions/deletions), ArrayDeque for normal orders (FIFO), 
+                        PriorityQueue for premium orders (priority-based), and Deque as Stack for undo operations (LIFO), 
+                        optimizing for each specific use case.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Project Learnings -->
+            <section class="project-section">
+                <h2 class="section-heading">Key Learnings</h2>
+                <ul class="learnings-list">
+                    <li>Mastered practical implementation of various Java data structures and their real-world applications</li>
+                    <li>Gained deep understanding of time complexity analysis and algorithm efficiency</li>
+                    <li>Learned to implement custom sorting algorithms (Merge Sort) from scratch</li>
+                    <li>Developed skills in designing undo/redo functionality using the Command pattern</li>
+                    <li>Enhanced understanding of queue management with priority handling</li>
+                    <li>Improved ability to select appropriate data structures based on specific requirements</li>
+                    <li>Practiced performance measurement and optimization techniques using runtime logging</li>
+                </ul>
+            </section>
+
+            <!-- Limitations & Future Improvements -->
+            <section class="project-section">
+                <h2 class="section-heading">Limitations & Future Improvements</h2>
+                <div class="challenge-item">
+                    <h3 class="challenge-title">Current Limitations</h3>
+                    <p class="challenge-text">
+                        • Supports only single restaurant operations (no multi-branch functionality)<br>
+                        • No data persistence - all data is lost on application restart<br>
+                        • Console-based interface only, lacking graphical user interface<br>
+                        • Limited to sequential processing without multi-threading support
+                    </p>
+                </div>
+                <div class="challenge-item">
+                    <h3 class="challenge-title">Planned Enhancements</h3>
+                    <p class="challenge-text">
+                        • Implement file-based or database persistence for menu and order data<br>
+                        • Develop JavaFX or Swing GUI for improved user experience<br>
+                        • Extend to support multiple restaurants with centralized management<br>
+                        • Add report export functionality (PDF/CSV formats)<br>
+                        • Implement multi-threading for concurrent order processing<br>
+                        • Add customer authentication and order tracking system
+                    </p>
+                </div>
+            </section>
+
+            <!-- Project Links -->
+            <section class="project-section">
+                <h2 class="section-heading">Project Links</h2>
+                <div class="project-links">
+                    <a href="https://github.com/Niduka292/OnlineFoodOrderingSystem" class="project-link-btn" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                        View on GitHub
+                    </a>
+                    <a href="../index.html#projects" class="project-link-btn secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484q-.121.12-.242.234c-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 0 2.04 4.327Z"/>
+                        </svg>
+                        More Projects
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer class="project-footer">
+            <p>&copy; 2025 Niduka Jayathunga. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
