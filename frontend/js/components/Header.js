@@ -2,17 +2,14 @@ const Header = {
   template: `
     <header>
       <div class="header">
-        <h3 class="header-name">Niduka</h3>
+        <div class="header-name">
+          <h3>Niduka</h3>
+        </div>
         <div class="nav-bar">
-          <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list">
-              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h14a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h14a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h14a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
-            </svg>
-          </button>
           <nav id="nav-menu" class="nav-menu">
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <a class="nav-menu-btn" href="#about">About</a>
+            <a class="nav-menu-btn" href="#projects">Projects</a>
+            <a class="nav-menu-btn" href="#contact">Contact</a>
           </nav>
         </div>
       </div>
@@ -28,9 +25,15 @@ const Header = {
           </div>
           <br><br><br>
           <div class="buttons-line-2">
-            <a class="a-button-linkedin" href="https://linkedin.com/in/niduka-jayathunga"><img src="./assets/linkedin-logo.png"/></a>
-            <a class="a-button-github" href="https://github.com/Niduka292"><img src="./assets/github-logo.png"/></a>
-            <a class="a-button-insta" href="https://www.instagram.com/niduka_065_"><img src="./assets/insta-logo.png"/></a>
+            <a class="a-button-linkedin" href="https://linkedin.com/in/niduka-jayathunga">
+              <img src="./assets/linkedin-logo.png" alt="LinkedIn"/>
+            </a>
+            <a class="a-button-github" href="https://github.com/Niduka292">
+              <img src="./assets/github-logo.png" alt="GitHub"/>
+            </a>
+            <a class="a-button-insta" href="https://www.instagram.com/niduka_065_">
+              <img src="./assets/insta-logo.png" alt="Instagram"/>
+            </a>
           </div>
         </div>
         <div class="demo-vid">
@@ -48,16 +51,7 @@ const Header = {
       </div>
       <br>
     </header>
-  `,
-  mounted() {
-    const toggle = document.getElementById('nav-toggle');
-    const menu = document.getElementById('nav-menu');
-    toggle.addEventListener('click', () => {
-      const expanded = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', !expanded);
-      menu.classList.toggle('active');
-    });
-  }
-}
+  `
+};
 
 export default Header;

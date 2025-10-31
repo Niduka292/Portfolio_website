@@ -14,8 +14,13 @@ p{
   color: rgb(141, 141, 141);
 }
 .header{
-  margin-left: 35px;
+  margin-left: 0px;
   flex-direction: row;
+  height: 75px;
+  padding-top: 0px;
+}
+.section-title{
+  margin-top: 200px;
 }
 .header-name{
   background: -webkit-linear-gradient(rgb(0, 255, 183), rgb(4, 75, 240));
@@ -26,6 +31,13 @@ p{
   margin-left: 18px;
   font-size: 19px;
   font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+.header-name h3,
+a{
+  margin-top: 0px;
+}
+.nav-menu-btn{
+  margin-right: 25px;
 }
 .projects,
 .contact{
@@ -148,7 +160,7 @@ a:hover,
   box-shadow: 0px 0px 45px rgb(53, 142, 187);
 }
 .a-button-projects{
-  margin-left: 100px;
+  margin-left: 90px;
 }
 .a-button-linkedin img{
   margin-left: 95px;
@@ -317,7 +329,7 @@ a:hover,
 .projects-header-1 svg{
   color: #6bb4fc;
   height: 28px;
-  margin-top: 10px;
+  margin: 5px 0px;
   width: auto;
 }
 .projects-header-2 p{
@@ -340,7 +352,7 @@ a:hover,
   min-height: 400px;
   background-color: rgba(9, 25, 35, 0.712);
   border-radius: 13px;
-  width: 100%;
+  width: 80%;
   max-width: 350px;
   margin: 10px;
   flex: 1 1 calc(33.33% - 1.5rem);
@@ -467,7 +479,7 @@ a:hover,
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   margin-top: 90px;
   gap: 30px;
   padding: 0 20px;
@@ -817,19 +829,6 @@ a:hover,
    MOBILE RESPONSIVE MEDIA QUERIES (original)
    ======================================== */
 
-/* Tablets - Keep row layout but adjust spacing */
-@media screen and (max-width: 1024px) {
-  .contact-section-container {
-    gap: 20px;
-    padding: 0 15px;
-  }
-  .connect-with-me {
-    max-width: 350px;
-  }
-  .contact-me-section {
-    max-width: 600px;
-  }
-}
 /* Tablets and smaller - Switch to column layout */
 @media screen and (max-width: 900px) {
   .contact-section-container {
@@ -842,58 +841,6 @@ a:hover,
     width: 100%;
   }
 }
-/* Mobile devices */
-@media screen and (max-width: 768px) {
-  .contact-section-container {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-  }
-  .connect-with-me {
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
-  .contact-me-section {
-    max-width: 100%;
-  }
-  .contact-me-title {
-    font-size: 28px;
-  }
-  .contact-name,
-  .contact-msg,
-  .send-message {
-    max-width: 100%;
-  }
-}
-/* Small mobile devices */
-@media screen and (max-width: 480px) {
-  .contact-section-container {
-    padding: 0 10px;
-  }
-  .connect-with-me,
-  .contact-me-section {
-    padding: 15px;
-  }
-  .contact-me-title {
-    font-size: 24px;
-  }
-  .connect-with-me-title p {
-    font-size: 22px;
-  }
-  .contact-me-header {
-    margin: 0px 10px;
-  }
-  .contact-me-form {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-  .connect-component-line-1 {
-    font-size: 18px;
-  }
-  .send-message {
-    font-size: 14px;
-  }
-}
 /* ========================================
    MOBILE RESPONSIVE MEDIA QUERIES (additional original)
    ======================================== */
@@ -903,13 +850,27 @@ a:hover,
     flex-direction: column;
     align-items: center;
   }
+  .header{
+    width: 1000px;
+  }
+  .section-intro p{
+    font-size: 7px;
+  }
   .about-me-para {
-    margin-left: 20px;
-    margin-right: 20px;
-    max-width: 100%;
+    margin-left: 50px;
+    margin-right: 0px;
+    text-justify: auto;
+    max-width: 85%;
+  }
+  .about-me-para p{
+    font-size: 2rem;
   }
   .about-me-headers {
-    margin-left: 20px;
+    margin-left: 60px;
+  }
+  .about-me-elements{
+    width: 800px;
+    height: auto;
   }
   .profile-pic img {
     margin-right: 0;
@@ -924,31 +885,55 @@ a:hover,
     margin-left: auto;
     margin-right: auto;
   }
+  .contact-section-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 15px;
+    margin-left: 30px;
+  }
+  .about-me-header-1,
+  .about-me-header-2{
+    font-size: 60px;
+    height: 85px;
+    line-height: 1.7rem;
+  }
+  .about-me-elements{
+    margin-bottom: 70px;
+  }
+  .projects-section{
+    margin-left: 0px;
+    width: 1020px;
+  }
+  .project-cards-row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .project-card{
+    max-width: 500px;
+  }
+  .connect-with-me {
+    max-width: 500px;
+    margin-bottom: 60px;
+  }
+  .contact-me-section {
+    max-width: 700px;
+  }
+  .connects-container{
+    max-width: 550px;
+  }
 }
 /* Mobile devices */
 @media screen and (max-width: 768px) {
-  .header {
-    flex-direction: row;
-    text-align: left;
-  }
-  .header-name {
-    margin: 10px auto;
-    text-align: center;
-  }
-  .nav-bar {
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-  .nav-bar nav {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
   .about-line-1,
   .about-line-2 {
     font-size: 60px;
     margin-left: 20px;
     text-align: center;
+  }
+  .buttons-line-2{
+    padding-left: 30px;
   }
   .role-text {
     margin-left: 20px;
@@ -979,10 +964,9 @@ a:hover,
     padding-top: 50px;
   }
   .about-me-para p {
-    font-size: 16px;
+    font-size: 1rem;
     max-width: 620px;
     margin-left: 0px;
-
   }
   .profile-pic img {
     max-width: 250px;
@@ -990,12 +974,6 @@ a:hover,
   .project-cards-row {
     flex-direction: column;
     align-items: center;
-  }
-  .project-card-1,
-  .project-card-2,
-  .project-card-3 {
-    max-width: 90%;
-    margin: 10px auto;
   }
   .tech-stack-row {
     justify-content: center;
@@ -1026,9 +1004,41 @@ a:hover,
   .connect-github {
     max-width: 100%;
   }
-
+  .project-card{
+    height: 100%;
+    width: 70%;
+  }
+  .contact-section-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+    gap: 30px;
+    padding: 0 20px;
+  }
   .about-me-content{
     padding-left: 0px;
+  }
+  .contact-section-container {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .connect-with-me {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .contact-me-section {
+    max-width: 100%;
+  }
+  .contact-me-title {
+    font-size: 28px;
+  }
+  .contact-name,
+  .contact-msg,
+  .send-message {
+    max-width: 100%;
   }
 }
 /* Small mobile devices */
@@ -1050,6 +1060,32 @@ a:hover,
     margin-left: 0px;
 
   }
+  .contact-section-container {
+    padding: 0 10px;
+  }
+  .connect-with-me,
+  .contact-me-section {
+    padding: 15px;
+  }
+  .contact-me-title {
+    font-size: 24px;
+  }
+  .connect-with-me-title p {
+    font-size: 22px;
+  }
+  .contact-me-header {
+    margin: 0px 10px;
+  }
+  .contact-me-form {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .connect-component-line-1 {
+    font-size: 18px;
+  }
+  .send-message {
+    font-size: 14px;
+  }
 }
 
 /* ===========================
@@ -1058,81 +1094,6 @@ a:hover,
    - Hide demo video on mobile
    - Adjust tech-stack images for small screens
    =========================== */
-
-.nav-toggle {
-  display: none; /* visible only on mobile via media query */
-  background-color: rgba(6, 6, 30, 0.9);
-  color: #fff;
-  border: 1px solid rgba(4,61,97,0.6);
-  padding: 8px 14px;
-  border-radius: 10px;
-  font-size: 16px;
-  cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
-  align-items: center;
-  gap: 8px;
-}
-
-/* The nav menu default (desktop) */
-.nav-menu {
-  display: flex;
-  gap: 12px;
-  align-items: center;
-}
-
-/* Mobile: show toggle, hide default menu items and show dropdown when active */
-@media screen and (max-width: 768px) {
-  .nav-toggle {
-    display: inline-flex;
-  }
-
-  /* hide inline nav-menu links for compact header; they'll appear in dropdown */
-  .nav-menu {
-    display: none; /* replaced by dropdown for mobile */
-    position: absolute;
-    top: 64px; /* adjust depending on header height */
-    right: 16px;
-    background: rgba(1,8,20,0.97);
-    border-radius: 12px;
-    box-shadow: 0 6px 30px rgba(0,0,0,0.6);
-    padding: 8px 8px;
-    flex-direction: column;
-    min-width: 200px;
-    z-index: 9999;
-  }
-
-  /* When nav-menu has class 'open' it will be visible */
-  .nav-menu.open {
-    display: flex;
-  }
-
-  .nav-menu a {
-    display: block;
-    padding: 10px 14px;
-    color: #fff;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(255,255,255,0.04);
-    font-size: 16px;
-  }
-  .nav-menu a:last-child {
-    border-bottom: none;
-  }
-  .nav-menu a:hover {
-    background: linear-gradient(90deg, rgba(4,110,240,0.12), rgba(5,217,203,0.08));
-  }
-
-  /* make sure header layout is compact for mobile */
-  .header {
-    position: relative;
-    padding: 12px 16px;
-  }
-
-  .nav-bar {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-}
 
 /* Accessibility helper (visually hidden but keep for screen readers if needed) */
 .sr-only {
@@ -1147,17 +1108,13 @@ a:hover,
   border: 0;
 }
 
-/* 2) Hide demo video completely on mobile (keep on tablet+desktop) */
-@media screen and (max-width: 768px) {
-  .demo-vid {
-    display: none !important;
-  }
-}
-
 /* 3) Reduce tech-stack component image size and ensure text doesn't overflow
    on smaller devices. We make images smaller and allow text wrap inside the component.
 */
 @media screen and (max-width: 768px) {
+  .demo-vid {
+    display: none !important;
+  }
   .tech-stack-component {
     width: 110px;
     height: 140px;
@@ -1190,98 +1147,3 @@ a:hover,
   }
 }
 
-.project-cards-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-
-/* -------------------------------
-   Header and Nav Bar Styling
---------------------------------*/
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 8px 10px;
-  background-color: rgb(0, 9, 21);
-  color: white;
-  margin-left: 0px;
-}
-
-.header-name p{
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-/* Base navigation menu */
-.nav-menu {
-  display: flex;
-  gap: 2rem;
-  transition: all 0.3s ease-in-out;
-}
-
-.nav-menu a {
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-.nav-menu a:hover {
-  color: rgb(0, 186, 253);
-  text-shadow: #15b0df;
-}
-
-/* The menu toggle button (hamburger icon) */
-.nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: white;
-}
-
-/* -------------------------------
-   Responsive Design (Mobile)
---------------------------------*/
-@media (max-width: 768px) {
-  .nav-toggle {
-    display: block; /* Show hamburger icon */
-  }
-
-  .nav-menu {
-    display: none; /* Hide menu by default */
-    flex-direction: column;
-    background-color: rgba(0, 9, 21, 0.95);
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    padding: 1rem 2rem;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0, 225, 255, 0.2);
-  }
-
-  .nav-menu.open {
-    display: flex; /* Show when toggled */
-    animation: fadeInMenu 0.3s ease forwards;
-  }
-
-  .nav-menu a {
-    padding: 10px 0;
-    text-align: right;
-    font-size: 1.1rem;
-  }
-}
-
-/* Smooth open animation */
-@keyframes fadeInMenu {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
