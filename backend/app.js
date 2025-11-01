@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../frontend/index.html"));
 });
 
-mongoose.connect("mongodb://127.0.0.1:27017/portfoliio_db")
+mongoose.connect(process.env.MONGO_URI)
 .then(function(){
     console.log("MongoDB connected successfully");
 })
