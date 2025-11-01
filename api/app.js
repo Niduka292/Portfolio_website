@@ -4,7 +4,7 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import cors from "cors";
 import { fileURLToPath } from "url";
-import contactRoutes from "./routes/contact.js";
+import contactRoutes from "../backend/routes/contact.js"; // adjust path if needed
 
 dotenv.config();
 
@@ -17,16 +17,8 @@ app.use(express.json());
 app.use(cors());
 app.use("/contact", contactRoutes);
 
-// Serve static frontend
-app.use(express.static(path.join(__dirname, "../frontend")));
-
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontend/index.html"));
-});
-
-// MongoDB connection
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB connected successfully"))
-  .catch(err => console.log("MongoDB connection error:", err));
+  .catch((err) => console.log("MongoDB connection failed:", err));
 
 export default app;
