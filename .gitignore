@@ -14,3 +14,4 @@ backend/.env
 
 # MacOS
 .DS_Store
+.vercel

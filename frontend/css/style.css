@@ -824,6 +824,15 @@ a:hover,
 .contact-me-form form{
   margin-bottom: 8px;
 }
+.success-msg {
+    color: #4caf50;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.error-msg {
+    color: #f44336;
+}
 
 /* ========================================
    MOBILE RESPONSIVE MEDIA QUERIES (original)
