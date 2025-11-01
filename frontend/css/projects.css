@@ -342,8 +342,24 @@ body {
   font-size: 14px;
 }
 
+@media screen and (max-width: 1024px) {
+  .main-project-image{
+    display: none;
+  }
+  .section-text{
+    width: 370px;
+    height: auto;
+  }
+  .challenge-title{
+    font-size: 20px;
+  }
+}
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+  .main-project-image{
+    display: none;
+  }
   .project-detail-container {
     padding: 20px 15px;
   }
@@ -392,6 +408,9 @@ body {
 }
 
 @media screen and (max-width: 480px) {
+  .main-project-image{
+    display: none;
+  }
   .project-title {
     font-size: 28px;
   }

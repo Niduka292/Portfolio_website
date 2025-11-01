@@ -846,6 +846,9 @@ a:hover,
    ======================================== */
 /* Tablets and smaller desktops */
 @media screen and (max-width: 1024px) {
+  .about-me{
+    margin-bottom: 60px;
+  }
   .about-me-content {
     flex-direction: column;
     align-items: center;
@@ -866,7 +869,7 @@ a:hover,
     font-size: 1.8rem;
   }
   .about-me-headers {
-    margin-left: 60px;
+    margin-left: 80px;
   }
   .about-me-elements{
     width: 800px;
@@ -954,11 +957,6 @@ a:hover,
   .a-button-insta img {
     margin-left: 10px;
   }
-  .demo-vid video {
-    height: auto;
-    width: 90%;
-    max-width: 320px;
-  }
   .section-title p {
     font-size: 35px;
     padding-top: 50px;
@@ -1041,7 +1039,7 @@ a:hover,
     max-width: 100%;
   }
   .demo-vid {
-    display: none !important;
+    display: none;
   }
   .tech-stack-component {
     width: 110px;
