@@ -85,7 +85,7 @@ a{
   display: flex;
   margin-bottom: 5px;
   width: 100%;
-  max-width: 1450px;
+  max-width: 1550px;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -863,13 +863,46 @@ a:hover,
     align-items: center;
   }
   .header{
-    width: 1000px;
+    width: 1040px;
+  }
+  .header-name h3{
+    font-size: 42px;
+  }
+  .nav-bar{
+    width: 320px;
+  }
+  a{
+    font-size: 24px;
+  }
+  .about-me-elements{
+    margin-top: 150px;
+  }
+  .about-line-1,
+  .about-line-2{
+    font-size: 108px;
+  }
+  .role-text{
+    font-size: 30px;
+    margin-top: 15px;
+  }
+  .a-button-contact,
+  .a-button-projects{
+    width: 170px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  }
+  .a-button-linkedin img,
+  .a-button-github img,
+  .a-button-insta img{
+    height: 40px;
+    width: auto;
   }
   .section-title p{
-    font-size: 65px;
+    font-size: 80px;
   }
   .section-intro p{
-    font-size: 9px;
+    font-size: 15px;
   }
   .about-me-para {
     margin-left: 50px;
@@ -896,6 +929,18 @@ a:hover,
   }
   .demo-vid {
     display: none;
+  }
+  .project-title-container{
+    height: 80px;
+    width: 155px;
+    margin-bottom: 45px;
+    padding-bottom: 25px;
+  }
+  .projects-header-2 p{
+    font-size: 32px;
+  }
+  .projects-header-1 svg{
+    height: 45px;
   }
   .projects,
   .tech-stack {
@@ -933,14 +978,87 @@ a:hover,
     max-width: 600px;
   }
   .connect-with-me {
-    max-width: 500px;
-    margin-bottom: 60px;
+    max-width: 750px;
+    margin-bottom: 70px;
+    max-height: 950px;
+    padding-bottom: 30px;
   }
   .contact-me-section {
     max-width: 700px;
   }
   .connects-container{
-    max-width: 550px;
+    max-width: 730px;
+  }
+  .connect-with-me-component{
+    width: 700px;
+  }
+  .contact-me-title {
+    font-size: 38px;
+  }
+  .connect-with-me-title p{
+    font-size: 38px;
+    margin-top: 15px;
+  }
+  .connect-with-me-title{
+    padding-left: 0px;
+    margin-bottom: 20px;
+  }
+  .connect-linkedin,
+  .connect-github,
+  .connect-insta{
+    height: 100px;
+    margin-left: 20px;
+  }
+  .connect-with-me-component img{
+    height: 70px;
+    width: 70px;
+  }
+  .contact-me-header{
+    margin-bottom: 30px;
+  }
+  .contact-me-form{
+    height: 400px;
+  }
+  .contact-name input{
+    height: 50px;
+  }
+
+  .contact-name{
+    height: 50px;
+  }
+  .contact-msg{
+    height: 105px;
+  }
+
+  .contact-msg textarea{
+    height: 105px;
+  }
+
+  .contact-name svg,
+  .contact-msg svg{
+    height: 19px;
+    width: auto;
+    padding-left: 10px;
+    padding-right: 5px;
+  }
+
+  .connect-component-line-1{
+    font-size: 30px;
+    font-weight: 400;
+  }
+  .connect-component-line-2{
+    font-size: 20px;
+    padding-top: 10px;
+  }
+  .contact-me-section{
+    max-width: 800px;
+    min-height: 600px;
+  }
+  .contact-me-title{
+    font-size: 52px;
+  }
+  .contact-me-intro{
+    font-size: 25px;
   }
 }
 /* Mobile devices */

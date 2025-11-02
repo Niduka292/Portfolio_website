@@ -47,7 +47,7 @@ const Header = {
         <p>About Me</p>
       </div>
       <div class="section-intro">
-        <p>Exploring creativity and innovation through practical web solutions</p>
+        <p>Exploring creativity and innovation</p>
       </div>
       <br>
     </header>

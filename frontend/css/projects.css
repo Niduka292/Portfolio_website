@@ -353,6 +353,15 @@ body {
   .challenge-title{
     font-size: 20px;
   }
+
+  .project-detail-container{
+    justify-self: center;
+  }
+  .section-heading{
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 28px;
+  }
 }
 
 /* Responsive Design */
@@ -377,12 +386,9 @@ body {
     font-size: 16px;
   }
 
-  .section-heading {
-    font-size: 28px;
-  }
-
   .section-text {
-    font-size: 16px;
+    font-size: 17px;
+    width: 500px;
   }
 
   .features-grid {
@@ -417,10 +423,6 @@ body {
 
   .project-subtitle {
     font-size: 14px;
-  }
-
-  .section-heading {
-    font-size: 24px;
   }
 
   .back-button {
