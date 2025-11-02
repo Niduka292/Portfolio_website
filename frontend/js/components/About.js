@@ -7,7 +7,7 @@ const About = {
             <div class="about-me-content">
                 <div class="about-me-text">
                     <div class="about-me-headers">
-                        <p class="about-me-header-1">Hello I'm</p>
+                        <p class="about-me-header-1"><br>Hello I'm</p>
                         <p class="about-me-header-2">Niduka Prabhasara</p>
                     </div>
                     <div class="about-me-para">

@@ -437,7 +437,7 @@ a:hover,
 }
 .tech-stack-component{
   border: 1.5px solid rgb(0, 70, 108);
-  height: 160px;
+  height: 170px;
   width: 140px;
   display: block;
   align-items: center;
@@ -865,17 +865,23 @@ a:hover,
   .header{
     width: 1000px;
   }
+  .section-title p{
+    font-size: 65px;
+  }
   .section-intro p{
-    font-size: 7px;
+    font-size: 9px;
   }
   .about-me-para {
     margin-left: 50px;
     margin-right: 0px;
     text-justify: auto;
-    max-width: 85%;
+    max-width: 90%;
+
   }
   .about-me-para p{
-    font-size: 1.8rem;
+    line-height: 3.8rem;
+    font-size: 37px;
+    font-weight: 200px;
   }
   .about-me-headers {
     margin-left: 80px;
@@ -886,10 +892,10 @@ a:hover,
   }
   .profile-pic img {
     margin-right: 0;
+    margin-top: 100px;
   }
   .demo-vid {
-    margin: 20px auto;
-    padding: 20px;
+    display: none;
   }
   .projects,
   .tech-stack {
@@ -905,9 +911,9 @@ a:hover,
   }
   .about-me-header-1,
   .about-me-header-2{
-    font-size: 60px;
-    height: 85px;
-    line-height: 1.7rem;
+    font-size: 73px;
+    height: 110px;
+    line-height: 1rem;
   }
   .about-me-elements{
     margin-bottom: 70px;
@@ -921,9 +927,10 @@ a:hover,
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
   }
   .project-card{
-    max-width: 500px;
+    max-width: 600px;
   }
   .connect-with-me {
     max-width: 500px;
@@ -1066,6 +1073,20 @@ a:hover,
     padding: 0 6px;
     line-height: 1.15;
   }
+  .about-me-header-1,
+  .about-me-header-2{
+    font-size: 73px;
+    height: 110px;
+    line-height: 1rem;
+  }
+  .section-title p{
+    font-size: 65px;
+  }
+  .about-me-para p{
+    line-height: 3.8rem;
+    font-size: 37px;
+    font-weight: 200px;
+  }
 }
 /* Small mobile devices */
 @media screen and (max-width: 480px) {
@@ -1079,7 +1100,10 @@ a:hover,
     margin-left: 10px;
   }
   .section-title p {
-    font-size: 26px;
+    font-size: 65px;
+  }
+  .section-intro p{
+    font-size: 9px;
   }
   .about-me-para p {
     font-size: 10px;
@@ -1145,6 +1169,162 @@ a:hover,
   }
   .tech-stack-name p {
     font-size: 11px;
+  }
+}
+
+.project-cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+.project-title p{
+  margin-top: 0px;
+  margin-left: 18px;
+}
+.project-card {
+  width: 100%;
+  max-width: 400px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+.view-details{
+  max-width: 200px;
+  width: 120px;
+}
+
+.project-image {
+  height: 180px;
+  width: auto;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.tech-stack-container {
+  display: grid;
+  grid-template-columns: repeat(4, 0.2fr);
+  gap: 20px;
+  justify-items: center;
+  justify-self: center;
+}
+
+.tech-stack-component {
+  width: 100%;
+  max-width: 200px;
+  width: 160px;
+  
+}
+
+@media (max-width: 1024px) {
+  .project-cards-container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+  }
+  .project-card {
+    width: 100%;
+    max-width: 780px;
+    height: 740px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 35px;
+    border-radius: 25px;
+  }
+  .project-image {
+    width: 700px;
+    height: auto;
+    margin: 40px;
+    margin-bottom: 40px;
+    margin-left: 40px;
+    overflow: hidden;
+  }
+  .project-title p{
+    font-size: 48px;
+
+  }
+  .project-description p{
+    font-size: 24px;
+    width: 95%;
+  }
+  .project-description{
+    height: 130px;
+  }
+  .view-details{
+    width: 180px;
+    height: 40px;
+    padding-left: 30px;
+    margin-left: 25px;
+  }
+  .view-details span{
+    font-size: 23px;
+  }
+  .view-details svg{
+    height: 18px;
+    width: auto;
+    padding-top: 5px;
+  }
+  
+  .tech-stack-container {
+    grid-template-columns: repeat(3, 0.8fr);
+    justify-self: center;
+    margin-top: 70px;
+  }
+  .tech-stack-component{
+    width: 300px;
+    max-width: 250px;
+    height: 250px;
+  }
+  .tech-stack-image{
+    margin: 25px;
+    margin-bottom: 30px;
+  }
+  .tech-stack-name{
+    font-size: 25px;
+  }
+  .footer{
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-cards-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-card {
+    max-width: 500px;
+    height: 600px;
+  }
+  
+  .project-image {
+    height: 320px;
+  }
+  
+  .tech-stack-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-stack-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .tech-stack-component {
+    max-width: 250px;
   }
 }
 
