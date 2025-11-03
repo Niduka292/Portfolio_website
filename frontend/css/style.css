@@ -932,9 +932,13 @@ a:hover,
   }
   .project-title-container{
     height: 80px;
-    width: 155px;
+    width: 170px;
     margin-bottom: 45px;
-    padding-bottom: 25px;
+    padding-bottom: 40px;
+  }
+  .projects-header-2{
+    width: 165px;
+    margin-top: 10px;
   }
   .projects-header-2 p{
     font-size: 32px;
@@ -980,11 +984,8 @@ a:hover,
   .connect-with-me {
     max-width: 750px;
     margin-bottom: 70px;
-    max-height: 950px;
+    min-height: 750px;
     padding-bottom: 30px;
-  }
-  .contact-me-section {
-    max-width: 700px;
   }
   .connects-container{
     max-width: 730px;
@@ -993,73 +994,117 @@ a:hover,
     width: 700px;
   }
   .contact-me-title {
-    font-size: 38px;
+    font-size: 75px;
   }
   .connect-with-me-title p{
-    font-size: 38px;
-    margin-top: 15px;
+    font-size: 50px;
+    margin-top: 35px;
   }
   .connect-with-me-title{
     padding-left: 0px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
   .connect-linkedin,
   .connect-github,
   .connect-insta{
-    height: 100px;
+    height: 130px;
     margin-left: 20px;
+    border-radius: 15px;
   }
   .connect-with-me-component img{
-    height: 70px;
-    width: 70px;
+    height: 90px;
+    width: 90px;
   }
   .contact-me-header{
     margin-bottom: 30px;
   }
   .contact-me-form{
-    height: 400px;
+    height: 1000px;
+    padding-top: 80px;
   }
   .contact-name input{
-    height: 50px;
+    height: 150px;
   }
 
   .contact-name{
-    height: 50px;
+    height: 150px;
+    margin-bottom: 50px;
+    border-radius: 15px;
   }
   .contact-msg{
-    height: 105px;
+    height: 355px;
+    margin-bottom: 70px;
+    border-radius: 15px;
   }
-
+  .contact-name input,
   .contact-msg textarea{
-    height: 105px;
+    font-size: 46px;
+    padding-left: 20px;
+    font-family: monospace;
+  }
+  .contact-msg textarea{
+    height: 355px;
+    padding-top: 35px;
   }
 
   .contact-name svg,
   .contact-msg svg{
-    height: 19px;
+    height: 50px;
     width: auto;
-    padding-left: 10px;
-    padding-right: 5px;
+    padding-left: 15px;
+    padding-right: 10px;
   }
 
   .connect-component-line-1{
-    font-size: 30px;
+    font-size: 42px;
+    width: 350px;
     font-weight: 400;
   }
   .connect-component-line-2{
-    font-size: 20px;
-    padding-top: 10px;
+    font-size: 23px;
+    padding-top: 22px;
   }
   .contact-me-section{
-    max-width: 800px;
-    min-height: 600px;
+    max-width: 950px;
+    min-height: 1450px;
   }
   .contact-me-title{
-    font-size: 52px;
+    font-size: 78px;
+    margin-top: 60px;
   }
   .contact-me-intro{
-    font-size: 25px;
+    font-size: 29px;
   }
+  .send-message{
+    height: 100px;
+  }
+  .send-message span{
+    font-size: 35px;
+    font-weight: 300;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .send-msg-svg-div svg{
+    height: 40px;
+    width: auto;
+  }
+  .contact-name svg,
+  .contact-msg svg{
+    height: 40px;
+    width: 60px;
+  }
+  .contact-name svg{
+    padding: 56px 12px;
+  }
+  .contact-msg svg{
+    padding-top: 45px;
+    margin-top: 0px;
+    padding-bottom: 268px;
+    align-self: self-start;
+  }
+  .a-button-contact{
+    width: 180px
+  }
+
 }
 /* Mobile devices */
 @media screen and (max-width: 768px) {
