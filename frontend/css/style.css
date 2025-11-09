@@ -239,7 +239,7 @@ a:hover,
   background: -webkit-linear-gradient(rgb(0, 242, 255), rgb(4, 102, 240));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  height: 55px;
+  height: 135px;
   margin-bottom: 0px;
 }
 .about-me-header-2{
@@ -855,6 +855,12 @@ a:hover,
    ======================================== */
 /* Tablets and smaller desktops */
 @media screen and (max-width: 1024px) {
+  .about-line-1{
+    text-shadow: 1px 1px 55px rgba(58, 152, 192, 0.767);
+  }
+  .about-line-2{
+    text-shadow: 1px 1px 55px rgba(0, 88, 88, 0.781);
+  }
   .about-me{
     margin-bottom: 60px;
   }
@@ -879,7 +885,7 @@ a:hover,
   }
   .about-line-1,
   .about-line-2{
-    font-size: 108px;
+    font-size: 118px;
   }
   .role-text{
     font-size: 30px;
@@ -1023,11 +1029,11 @@ a:hover,
     padding-top: 80px;
   }
   .contact-name input{
-    height: 150px;
+    height: 130px;
   }
 
   .contact-name{
-    height: 150px;
+    height: 130px;
     margin-bottom: 50px;
     border-radius: 15px;
   }
@@ -1038,7 +1044,7 @@ a:hover,
   }
   .contact-name input,
   .contact-msg textarea{
-    font-size: 46px;
+    font-size: 36px;
     padding-left: 20px;
     font-family: monospace;
   }
@@ -1093,7 +1099,9 @@ a:hover,
     width: 60px;
   }
   .contact-name svg{
-    padding: 56px 12px;
+    padding: 44px 12px;
+    border-left: 0.5px;
+    border-radius: 5px;
   }
   .contact-msg svg{
     padding-top: 45px;

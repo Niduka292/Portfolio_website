@@ -7,7 +7,8 @@ const techStackData = [
   { name: "Node JS", img: "./assets/nodejs.png" },
   { name: "React JS", img: "./assets/react.png" },
   { name: "HTML", img: "./assets/html.png" },
-  { name: "Spring boot", img: "./assets/springboot.png"}
+  { name: "Spring boot", img: "./assets/springboot.png"},
+  { name: "PostgreSQL", img: "./assets/postgresql.png"}
 ];
 
 export default techStackData;
