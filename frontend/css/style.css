@@ -878,7 +878,7 @@ a:hover,
     width: 320px;
   }
   a{
-    font-size: 24px;
+    font-size: 27px;
   }
   .about-me-elements{
     margin-top: 150px;
@@ -893,16 +893,27 @@ a:hover,
   }
   .a-button-contact,
   .a-button-projects{
-    width: 170px;
-    height: auto;
+    margin-top: 30px;
+    width: 270px;
+    height: 70px;
     align-items: center;
     justify-content: center;
+    box-shadow: 0px 0px 60px rgb(25, 64, 79);
+  }
+  .a-button-contact span,
+  .a-button-projects span{
+    font-size: 36px;
+    padding-left: 12px;
   }
   .a-button-linkedin img,
   .a-button-github img,
   .a-button-insta img{
-    height: 40px;
+    height: 55px;
     width: auto;
+    box-shadow: 0px 0px 65px rgb(11, 50, 83);
+  }
+  .buttons-line-2{
+    margin-left: 22px;
   }
   .section-title p{
     font-size: 80px;
@@ -1072,7 +1083,7 @@ a:hover,
   }
   .contact-me-section{
     max-width: 950px;
-    min-height: 1450px;
+    min-height: 1250px;
   }
   .contact-me-title{
     font-size: 78px;
@@ -1108,9 +1119,6 @@ a:hover,
     margin-top: 0px;
     padding-bottom: 268px;
     align-self: self-start;
-  }
-  .a-button-contact{
-    width: 180px
   }
 
 }

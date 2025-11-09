@@ -20,8 +20,12 @@ const Header = {
           <p class="about-line-2">Developer</p>
           <p class="role-text">Computer Science Undergraduate</p>
           <div class="buttons-line-1">
-            <a class="a-button-projects" href="#projects">View My Work</a> &nbsp;
-            <a class="a-button-contact" href="#contact">Get In Touch &#128386;</a>
+            <a class="a-button-projects" href="#projects">
+              <span>View My Work</span>
+              </a> &nbsp;
+            <a class="a-button-contact" href="#contact">
+              <span>Get In Touch &#128386; </span>
+            </a>
           </div>
           <br><br><br>
           <div class="buttons-line-2">
