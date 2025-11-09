@@ -894,11 +894,12 @@ a:hover,
   .a-button-contact,
   .a-button-projects{
     margin-top: 30px;
-    width: 280px;
+    width: 277px;
     height: 50px;
     align-items: center;
     justify-content: center;
     box-shadow: 0px 0px 60px rgb(25, 64, 79);
+    padding: 10px 10px;
   }
   .a-button-projects{
     width: 260px;
