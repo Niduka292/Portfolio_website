@@ -894,18 +894,18 @@ a:hover,
   .a-button-contact,
   .a-button-projects{
     margin-top: 30px;
-    width: 290px;
-    height: 60px;
+    width: 280px;
+    height: 50px;
     align-items: center;
     justify-content: center;
     box-shadow: 0px 0px 60px rgb(25, 64, 79);
   }
   .a-button-projects{
-    width: 270px;
+    width: 260px;
   }
   .a-button-contact span,
   .a-button-projects span{
-    font-size: 36px;
+    font-size: 34px;
     padding: 10px 10px;
     margin: 10px 10px;
   }
