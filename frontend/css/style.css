@@ -35,9 +35,11 @@ p{
 .header-name h3,
 a{
   margin-top: 0px;
+  font-size: 23px;
 }
 .nav-menu-btn{
-  margin-right: 25px;
+  margin: 0px 16px;
+  font-size: 17px;
 }
 .projects,
 .contact{
@@ -83,7 +85,7 @@ a{
 }
 .header{
   display: flex;
-  margin-bottom: 5px;
+  margin: 8px 10px;
   width: 100%;
   max-width: 1550px;
   justify-content: space-between;
@@ -409,9 +411,11 @@ a:hover,
   margin-left: 15px;
   border: 1px solid rgb(1, 115, 115);
   border-radius: 10px;
-  padding: 8px 12px;
+  padding: 6px 12px;
   display: inline-block;
   margin-top: 10px;
+  max-height: 32px;
+  padding-bottom: 10px;
 }
 .view-details svg{
   width: 12px;
