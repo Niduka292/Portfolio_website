@@ -3,6 +3,9 @@
    (kept from your provided CSS)
    =========================== */
 
+html{
+  scroll-behavior: smooth;
+}
 body{
   background-color: rgb(0, 9, 21);
   margin: 0;
@@ -98,7 +101,7 @@ a{
 }
 .about-line-1,
 .about-line-2{
-  font-size: 65px;
+  font-size: 72px;
   margin: 0px;
   margin-left: 90px;
   font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
@@ -210,6 +213,10 @@ a:hover,
 }
 .about-me-text{
   display: block;
+  padding-left: 50px;
+}
+.about-me-elements{
+  padding-left: 60px;
 }
 .about-me-content{
   width: 100%;
@@ -246,6 +253,7 @@ a:hover,
   -webkit-text-fill-color: transparent;
   height: 135px;
   margin-bottom: 0px;
+  margin-top: 0px;
 }
 .about-me-header-2{
   color: white;
@@ -261,9 +269,10 @@ a:hover,
 }
 .profile-pic{
   position: relative;
-  margin: 20px auto;
+  margin: 30px auto;
   display: flex;
   justify-content: center;
+  margin-top: 120px;
 }
 .profile-pic img:hover{
   box-shadow: 0px 0px 2000px rgb(24, 71, 101);
