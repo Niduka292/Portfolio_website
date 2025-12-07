@@ -19,7 +19,7 @@ p{
 .header{
   margin-left: 0px;
   flex-direction: row;
-  height: 75px;
+  height: 80px;
   padding-top: 0px;
 }
 .section-title{
@@ -30,7 +30,7 @@ p{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   width: 250px;
-  margin-top: 19px;
+  margin-top: 0px;
   margin-left: 18px;
   font-size: 19px;
   font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
@@ -62,6 +62,9 @@ a{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+.nav-menu{
+  padding-bottom: 18px;
 }
 .demo-vid{
   margin: 40px auto;
@@ -888,7 +891,8 @@ a:hover,
     width: 1040px;
   }
   .header-name h3{
-    font-size: 50px;
+    font-size: 40px;
+    padding-top: 10px;
   }
   .nav-bar{
     width: 320px;
