@@ -213,7 +213,7 @@ a:hover,
 }
 .about-me-text{
   display: block;
-  padding-left: 50px;
+  padding: 10px auto;
 }
 .about-me-elements{
   padding-left: 60px;
@@ -888,13 +888,19 @@ a:hover,
     width: 1040px;
   }
   .header-name h3{
-    font-size: 42px;
+    font-size: 50px;
   }
   .nav-bar{
     width: 320px;
   }
   a{
     font-size: 27px;
+  }
+  .nav-menu-btn{
+    font-size: 22px;
+  }
+  .nav-menu{
+    padding-bottom: 28px;
   }
   .about-me-elements{
     margin-top: 150px;
@@ -904,7 +910,7 @@ a:hover,
     font-size: 118px;
   }
   .role-text{
-    font-size: 30px;
+    font-size: 38px;
     margin-top: 15px;
   }
   .a-button-contact,
@@ -940,7 +946,11 @@ a:hover,
     font-size: 80px;
   }
   .section-intro p{
-    font-size: 15px;
+    font-size: 32px;
+  }
+  .section-intro{
+    height: 55px;
+    margin-bottom: 150px;
   }
   .about-me-para {
     margin-left: 50px;
@@ -964,6 +974,8 @@ a:hover,
   .profile-pic img {
     margin-right: 0;
     margin-top: 100px;
+    max-width: 440px;
+    border-radius: 220px;
   }
   .demo-vid {
     display: none;
@@ -987,14 +999,14 @@ a:hover,
   .projects,
   .tech-stack {
     width: 95%;
-    margin-left: auto;
+    margin-left: 20px;
     margin-right: auto;
   }
   .contact-section-container {
     flex-direction: column;
     gap: 20px;
     padding: 0 15px;
-    margin-left: 30px;
+    margin-left: 60px;
   }
   .about-me-header-1,
   .about-me-header-2{
@@ -1495,7 +1507,7 @@ a:hover,
     font-size: 25px;
   }
   .footer{
-    font-size: 12px;
+    font-size: 30px;
   }
 }
 
