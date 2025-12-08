@@ -944,8 +944,8 @@ a:hover,
   .a-button-contact span,
   .a-button-projects span{
     font-size: 34px;
-    padding-left: 16px;
-    padding-bottom: 5px;
+    padding-left: 12px;
+    padding-bottom: 4px;
   }
   .a-button-contact span{
     width: 200px;
