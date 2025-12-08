@@ -1206,6 +1206,11 @@ a:hover,
     margin-left: 0;
     margin: 10px;
   }
+  .a-button-contact span,
+  .a-button-projects span{
+    padding-left: 8px;
+    padding-bottom: 2px;
+  }
   .a-button-linkedin img,
   .a-button-github img,
   .a-button-insta img {
