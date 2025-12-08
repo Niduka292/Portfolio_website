@@ -936,6 +936,7 @@ a:hover,
     padding: 10px 10px;
     padding-top: 13px;
     display: inline-flex;
+    border-radius: 35px;
   }
   .a-button-projects{
     width: 260px;
@@ -943,7 +944,7 @@ a:hover,
   .a-button-contact span,
   .a-button-projects span{
     font-size: 34px;
-    padding-left: 14px;
+    padding-left: 16px;
     padding-bottom: 5px;
   }
   .a-button-contact span{
