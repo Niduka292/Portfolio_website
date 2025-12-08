@@ -151,7 +151,14 @@ a:hover,
   text-decoration: none;
   box-shadow: 0px 0px 120px rgb(51, 113, 140);
   background-color: rgba(6, 6, 30, 0.833);
-  display: inline-block;
+  display: inline-flex;
+  gap: 2px;
+}
+.a-button-contact svg{
+  padding-top: 4px;
+  padding-left: 5px;
+  height: 16px;
+  width: 16px;
 }
 .a-button-contact span,
 .a-button-projects span{
@@ -928,6 +935,7 @@ a:hover,
     box-shadow: 0px 0px 120px rgb(40, 79, 95);
     padding: 10px 10px;
     padding-top: 13px;
+    display: inline-flex;
   }
   .a-button-projects{
     width: 260px;
@@ -935,9 +943,20 @@ a:hover,
   .a-button-contact span,
   .a-button-projects span{
     font-size: 34px;
-    padding: 10px 10px;
-    margin: 10px 10px;
+    padding-left: 18px;
+    padding-bottom: 8px;
   }
+  .a-button-contact span{
+    width: 200px;
+  }
+  .a-button-contact svg{
+  padding-top: 0px;
+  padding-left: 2px;
+  height: 32px;
+  width: 32px;
+  padding-right: 8px;
+  padding-bottom: 3px;
+}
   .a-button-linkedin img,
   .a-button-github img,
   .a-button-insta img{
