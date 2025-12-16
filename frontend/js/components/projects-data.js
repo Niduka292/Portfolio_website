@@ -1,5 +1,11 @@
 const projectsData = [
   {
+    title: "Email Application",
+    description: "A modern email client that integrates functionalities like AI summarization and powerful full-text search.",
+    img: "./assets/email-application.png",
+    link: "/projects/email-application.html"
+  },
+  {
     title: "Airplane Ticket Booking System",
     description: "Desktop-based Airplane Ticket Booking Management System developed using JavaFX, Java and PostgreSQL.",
     img: "./assets/airplane-ticket-booking.png",
@@ -22,7 +28,7 @@ const projectsData = [
     description: "Simple to-do list application built using Javascript and CSS as a learning project.",
     img: "./assets/to-do-list.png",
     link: "/projects/to-do-list.html"
-  }
+  },
 ];
 
 export default projectsData;
