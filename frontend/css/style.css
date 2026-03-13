@@ -146,7 +146,7 @@ a:hover,
 .a-button-projects{
   width: 120px;
   padding: 10px 20px;
-  border: 1.5px outset rgb(4, 61, 97);
+  border: 1.8px solid rgb(7, 40, 61);
   border-radius: 25px;
   text-decoration: none;
   box-shadow: 0px 0px 120px rgb(51, 113, 140);
@@ -173,16 +173,28 @@ a:hover,
   border-color:rgb(11, 143, 143);
   text-shadow: none;
 }
+
+.a-button-contact:hover,
+.a-button-projects:hover{
+  background-color: rgb(237, 255, 254);
+  color: #083f49;
+  animation-name: animationPop2;
+  animation-duration: 0.35s;
+  animation-fill-mode: forwards;
+}
 .a-button-linkedin img:hover,
 .a-button-github img:hover,
 .a-button-insta img:hover{
   box-shadow: 0px 0px 45px rgb(53, 142, 187);
+  animation-name: animationPop2;
+  animation-duration: 0.35s;
+  animation-fill-mode: forwards;
 }
 .a-button-projects{
   margin-left: 90px;
 }
 .a-button-linkedin img{
-  margin-left: 95px;
+  margin-left: 100px;
 }
 .a-button-github img,
 .a-button-insta img{
@@ -296,6 +308,10 @@ a:hover,
 @keyframes animationPop{
   from {transform: scale(1);}
   to {transform: scale(1.02);}
+}
+@keyframes animationPop2{
+  from {transform: scale(1);}
+  to {transform: scale(1.04);}
 }
 .section-intro p{
   text-align: center;

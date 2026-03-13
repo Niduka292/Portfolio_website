@@ -1,6 +1,6 @@
 const projectsData = [
   {
-    title: "Email Application",
+    title: "MailForge",
     description: "A modern email client that integrates functionalities like AI summarization and powerful full-text search.",
     img: "./assets/email-application.png",
     link: "/projects/email-application.html"
