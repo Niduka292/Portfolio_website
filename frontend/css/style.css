@@ -142,8 +142,12 @@ a:hover,
 .buttons-line-2{
   flex-direction: row;
 }
+.buttons-line-1{
+  margin-left: 72px;
+}
 .a-button-contact,
-.a-button-projects{
+.a-button-projects,
+.a-button-cv{
   width: 120px;
   padding: 10px 20px;
   border: 1.8px solid rgb(7, 40, 61);
@@ -153,6 +157,17 @@ a:hover,
   background-color: rgba(6, 6, 30, 0.833);
   display: inline-flex;
   gap: 2px;
+  margin: 0px 10px;
+}
+.a-button-cv{
+  width: 140px;
+  background-color: #094284;
+  padding: 9.2px 20px;
+}
+.a-button-cv button{
+  background-color: #094284;
+  border: none;
+  color: white;
 }
 .a-button-contact svg{
   padding-top: 4px;
@@ -161,7 +176,8 @@ a:hover,
   width: 16px;
 }
 .a-button-contact span,
-.a-button-projects span{
+.a-button-projects span,
+.a-button-cv span{
   font-size: 17px;
 }
 .a-button-contact:hover,
@@ -173,7 +189,21 @@ a:hover,
   border-color:rgb(11, 143, 143);
   text-shadow: none;
 }
-
+.a-button-cv:hover,
+.a-button-cv:hover .cv-button{
+  background-color: #2068a2;
+  animation-name: animationPop3;
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+.a-button-cv:hover{
+  animation-name: animationPop2;
+  animation-duration: 0.25s;
+  animation-fill-mode: forwards;
+  box-shadow: 0px 0px 90px rgb(16, 94, 132);
+  border-color:rgb(9, 87, 110);
+}
 .a-button-contact:hover,
 .a-button-projects:hover{
   background-color: rgb(237, 255, 254);
@@ -189,9 +219,6 @@ a:hover,
   animation-name: animationPop2;
   animation-duration: 0.35s;
   animation-fill-mode: forwards;
-}
-.a-button-projects{
-  margin-left: 90px;
 }
 .a-button-linkedin img{
   margin-left: 100px;
@@ -311,7 +338,11 @@ a:hover,
 }
 @keyframes animationPop2{
   from {transform: scale(1);}
-  to {transform: scale(1.04);}
+  to {transform: scale(1.03);}
+}
+@keyframes animationPop3{
+  from {transform: scale(1);}
+  to {transform: scale(1.005);}
 }
 .section-intro p{
   text-align: center;
@@ -942,7 +973,8 @@ a:hover,
     margin-top: 15px;
   }
   .a-button-contact,
-  .a-button-projects{
+  .a-button-projects,
+  .a-button-cv{
     margin-top: 30px;
     width: 277px;
     height: 50px;
@@ -958,21 +990,26 @@ a:hover,
     width: 260px;
   }
   .a-button-contact span,
-  .a-button-projects span{
-    font-size: 34px;
+  .a-button-projects span,
+  .a-button-cv span{
+    font-size: 32px;
     padding-left: 0px;
-    padding-bottom: 4px;
+    padding-bottom: 12px;
   }
   .a-button-contact span{
     width: 200px;
   }
-  .a-button-contact svg{
+  .a-button-contact svg,
+  .a-button-cv svg{
   padding-top: 0px;
   padding-left: 2px;
   height: 32px;
   width: 32px;
   padding-right: 8px;
-  padding-bottom: 4px;
+  padding-bottom: 0px;
+}
+.a-button-cv svg{
+  padding-top: 5px;
 }
   .a-button-linkedin img,
   .a-button-github img,
@@ -980,6 +1017,9 @@ a:hover,
     height: 55px;
     width: auto;
     box-shadow: 0px 0px 65px rgb(11, 50, 83);
+  }
+  .buttons-line-1{
+    margin-bottom: 60px;
   }
   .buttons-line-2{
     margin-left: 22px;
