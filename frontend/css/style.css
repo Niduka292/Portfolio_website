@@ -1157,7 +1157,9 @@ a:hover,
   .contact-name input{
     height: 130px;
   }
-
+  .a-button-projects{
+    display: none;
+  }
   .contact-name{
     height: 130px;
     margin-bottom: 50px;
