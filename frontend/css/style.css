@@ -153,8 +153,8 @@ a:hover,
   border: 1.8px solid rgb(7, 40, 61);
   border-radius: 25px;
   text-decoration: none;
-  box-shadow: 0px 0px 120px rgb(51, 113, 140);
-  background-color: rgba(6, 6, 30, 0.833);
+  box-shadow: 0px 0px 120px rgb(48, 95, 112);
+  background-color: rgba(7, 17, 35, 0.833); 
   display: inline-flex;
   gap: 2px;
   margin: 0px 10px;
@@ -931,9 +931,11 @@ a:hover,
 @media screen and (max-width: 1024px) {
   .about-line-1{
     text-shadow: 1px 1px 125px rgba(111, 178, 194, 0.867);
+    margin-left: 5px;
   }
   .about-line-2{
     text-shadow: 1px 1px 125px rgba(47, 135, 146, 0.879);
+    margin-left: 5px;
   }
   .about-me{
     margin-bottom: 60px;
@@ -966,18 +968,19 @@ a:hover,
   }
   .about-line-1,
   .about-line-2{
-    font-size: 120px;
+    font-size: 140px;
   }
   .role-text{
-    font-size: 38px;
-    margin-top: 15px;
+    font-size: 40px;
+    margin-top: 25px;
+    margin-left: 5px;
   }
   .a-button-contact,
   .a-button-projects,
   .a-button-cv{
     margin-top: 30px;
-    width: 277px;
-    height: 50px;
+    width: 320px;
+    height: 65px;
     align-items: center;
     justify-content: center;
     box-shadow: 0px 0px 120px rgb(40, 79, 95);
@@ -986,13 +989,16 @@ a:hover,
     display: inline-flex;
     border-radius: 35px;
   }
+  .a-button-contact{
+    margin-left: 0px;
+  }
   .a-button-projects{
     width: 260px;
   }
   .a-button-contact span,
   .a-button-projects span,
   .a-button-cv span{
-    font-size: 32px;
+    font-size: 34px;
     padding-left: 0px;
     padding-bottom: 2px;
   }
@@ -1018,8 +1024,12 @@ a:hover,
     width: auto;
     box-shadow: 0px 0px 65px rgb(11, 50, 83);
   }
+  .a-button-linkedin img{
+    margin-left: 0px;
+  }
   .buttons-line-1{
     margin-bottom: 60px;
+    margin-left: 0px;
   }
   .buttons-line-2{
     margin-left: 22px;
