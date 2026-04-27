@@ -369,6 +369,9 @@ body {
   .main-project-image{
     display: none;
   }
+  .project-subtitle{
+    font-size: 25px;
+  }
   .section-text{
     width: 100%;
     height: auto;
@@ -410,7 +413,7 @@ body {
   }
 
   .project-subtitle {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .section-text {
@@ -453,7 +456,7 @@ body {
   }
 
   .project-subtitle {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   .back-button {
