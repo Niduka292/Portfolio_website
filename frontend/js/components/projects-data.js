@@ -1,5 +1,11 @@
 const projectsData = [
   {
+    title: "Hivebliss",
+    description: "An e-commerce platform for a honey & herbal plant shop with order tracking and admin dashboards.",
+    img: "./assets/hivebliss.png",
+    link: "/projects/hivebliss.html"
+  },
+  {
     title: "MailForge",
     description: "A modern email client that integrates functionalities like AI summarization and powerful full-text search.",
     img: "./assets/email-application.png",
@@ -22,13 +28,7 @@ const projectsData = [
     description: "Data analysing and visualization project built using Python, NLP and Dash.",
     img: "./assets/wine-analytics.png",
     link: "/projects/wine-analysis.html"
-  },
-  {
-    title: "To Do List",
-    description: "Simple to-do list application built using Javascript and CSS as a learning project.",
-    img: "./assets/to-do-list.png",
-    link: "/projects/to-do-list.html"
-  },
+  }
 ];
 
 export default projectsData;
