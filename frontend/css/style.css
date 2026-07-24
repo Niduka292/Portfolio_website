@@ -479,8 +479,8 @@ a:hover,
 }
 .view-details{
   margin-left: 15px;
-  border: 1px solid rgb(1, 115, 115);
-  border-radius: 10px;
+  border: 2px solid rgb(2, 77, 104);
+  border-radius: 12px;
   padding: 6px 12px;
   display: inline-block;
   margin-top: 10px;
@@ -496,6 +496,7 @@ a:hover,
 .view-details span{
   font-size: medium;
   margin-bottom: 5px;
+  margin-left: 5px;
 }
 .view-details:hover{
   cursor: pointer;
@@ -1640,3 +1641,186 @@ a:hover,
   }
 }
 
+.volunteer-section {
+  padding: 2rem 1rem; /* Added horizontal padding for small screens */
+}
+
+.volunteer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 130px;
+}
+
+.volunteer-card {
+  border: 2px solid rgb(2, 77, 104);
+  min-height: 200px;
+  background-color: rgba(9, 25, 35, 0.712);
+  border-radius: 13px;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.volunteer-card:hover {
+  background-color: rgba(24, 27, 41, 0.712);
+  box-shadow: 0px 0px 80px rgb(6, 87, 128);
+  border-color:rgb(7, 111, 111);
+  animation-name: animationPop;
+  transform: translateY(-2px);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Flex wrapper to group logo + text titles together */
+.card-header-main {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Logo styling tailored to dark backgrounds */
+.volunteer-logo {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.volunteer-role {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+  color: #ffffff;
+}
+
+.volunteer-org {
+  font-size: 0.9rem;
+  color: #888888;
+  margin: 0;
+}
+
+.volunteer-tag {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+/* Badge colors matching your glassmorphism color palette */
+.leadership-tag {
+  background-color: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.outreach-tag {
+  background-color: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.dev-tag {
+  background-color: rgba(168, 85, 247, 0.15);
+  color: #c084fc;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+}
+
+.cloud-tag {
+  background-color: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.volunteer-highlights {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #cccccc;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-top: 35px;
+}
+
+.volunteer-highlights li {
+  margin-bottom: 0.5rem;
+}
+
+.volunteer-highlights li:last-child {
+  margin-bottom: 0;
+}
+
+/* Base styles remain the same, replace or update the mobile @media block */
+
+@media (max-width: 640px) {
+  /* Give cards more room on screen by reducing excessive side margins */
+  .volunteer-section {
+    padding: 2.5rem 0.75rem;
+  }
+
+  .volunteer-container {
+    gap: 1.75rem;
+  }
+
+  .volunteer-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.85rem;
+  }
+
+  .card-header-main {
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  /* Bigger Logo on Mobile */
+  .volunteer-logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  /* Bigger Titles & Descriptions */
+  .volunteer-role {
+    font-size: 1.25rem; /* Increased size */
+    line-height: 1.35;
+    margin-bottom: 0.35rem;
+  }
+
+  .volunteer-org {
+    font-size: 0.95rem; /* Increased size */
+    line-height: 1.4;
+    color: #a0a0a0;
+  }
+
+  /* Larger Tag for better readability */
+  .volunteer-tag {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.85rem;
+  }
+
+  /* Bigger Bullet Points */
+  .volunteer-highlights {
+    font-size: 1rem; /* Increased from 0.9rem */
+    line-height: 1.6;
+    padding-left: 1.25rem;
+    margin-top: 0.75rem;
+  }
+
+  .volunteer-highlights li {
+    margin-bottom: 0.75rem;
+  }
+}

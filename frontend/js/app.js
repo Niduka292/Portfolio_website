@@ -3,6 +3,7 @@ import Footer from "./components/Footer.js"
 import Contact from "./components/Contact.js"
 import About from "./components/About.js"
 import Projects from "./components/Projects.js"
+import Volunteer from "./components/Volunteer.js"
 import { createApp } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
 
 const PortfolioApp = {
@@ -12,7 +13,7 @@ const PortfolioApp = {
         }
     },
     components:{
-        Header, Footer, About, Contact, Projects
+        Header, Footer, About, Contact, Projects, Volunteer
     },
     template:`
         <div>
@@ -21,6 +22,7 @@ const PortfolioApp = {
                 <section id="home"><Home/></section>
                 <section id="about"><About/></section>
                 <section id="projects"><Projects/></section>
+                <section id="volunteer"><Volunteer/></section>
                 <section id="contact"><Contact/></section>
             </main>
             <Footer/>
