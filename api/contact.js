@@ -1,12 +1,11 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import nodemailer from "nodemailer";
 
 dotenv.config();
 
 console.log("🚀 Function started");
-console.log("📋 All environment variables:", Object.keys(process.env));
-console.log("🔍 MONGO_URI exists?", !!process.env.MONGO_URI);
-console.log("🔍 MONGO_URI value (first 20 chars):", process.env.MONGO_URI?.substring(0, 20));
+
 // MongoDB connection
 if (!process.env.MONGO_URI) {
   console.error("❌ MONGO_URI is missing!");
@@ -23,7 +22,7 @@ async function connectDB() {
     console.log("🔄 Creating new connection...");
     conn = await mongoose.connect(process.env.MONGO_URI, {
       bufferCommands: false,
-      serverSelectionTimeoutMS: 5000, // 5 second timeout
+      serverSelectionTimeoutMS: 5000,
     });
     console.log("✅ MongoDB connected");
     return conn;
@@ -43,11 +42,20 @@ const messageSchema = new mongoose.Schema({
 
 const Message = mongoose.models.Message || mongoose.model("Message", messageSchema);
 
+// Configure Nodemailer Transporter outside handler for reusability
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS, // Google 16-character App Password
+  },
+});
+
 // API route handler
 export default async function handler(req, res) {
   console.log("📥 Request received:", req.method, req.url);
   
-  // CRITICAL: Set headers first
+  // Set headers first
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
@@ -76,9 +84,31 @@ export default async function handler(req, res) {
         });
       }
 
+      // 1. Save to MongoDB
       const newMsg = new Message({ name, email, message });
       await newMsg.save();
-      console.log("✅ Message saved successfully");
+      console.log("✅ Message saved to MongoDB successfully");
+
+      // 2. Send Email Notification
+      try {
+        await transporter.sendMail({
+          from: `"Portfolio Contact" <${process.env.EMAIL_USER}>`,
+          to: process.env.EMAIL_USER,
+          replyTo: email,
+          subject: `New portfolio message from ${name}`,
+          html: `
+            <h3>New Portfolio Contact Message</h3>
+            <p><strong>Name:</strong> ${name}</p>
+            <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
+            <p><strong>Message:</strong></p>
+            <p>${message}</p>
+          `,
+        });
+        console.log("✉️ Email notification sent successfully");
+      } catch (emailErr) {
+        // Log email errors specifically so serverless function doesn't crash completely
+        console.error("❌ Email sending failed:", emailErr.message);
+      }
       
       return res.status(200).json({ 
         success: true, 
@@ -107,7 +137,6 @@ export default async function handler(req, res) {
     console.error("❌ Error in handler:", err);
     console.error("Stack trace:", err.stack);
     
-    // CRITICAL: Always return a response, even on error
     return res.status(500).json({ 
       success: false, 
       msg: "Server error", 
