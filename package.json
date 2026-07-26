@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "type": "module",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "mongoose": "^7.5.0",
-    "dotenv": "^16.0.3"
+    "nodemailer": "^9.0.3"
   }
 }
