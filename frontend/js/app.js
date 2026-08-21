@@ -22,7 +22,6 @@ const PortfolioApp = {
                 <section id="home"><Home/></section>
                 <section id="about"><About/></section>
                 <section id="projects"><Projects/></section>
-                <section id="volunteer"><Volunteer/></section>
                 <section id="contact"><Contact/></section>
             </main>
             <Footer/>

@@ -46,23 +46,6 @@ const Volunteer = {
           </ul>
         </div>
 
-        <!-- Subject Combination Representative -->
-        <div class="volunteer-card">
-          <div class="card-header">
-            <div class="card-header-main">
-              <div class="role-title-group">
-                <h4 class="volunteer-role">Subject Combination Representative</h4>
-                <p class="volunteer-org">Faculty of Applied Sciences • University of Sri Jayewardenepura</p>
-              </div>
-            </div>
-            <span class="volunteer-tag leadership-tag">Leadership</span>
-          </div>
-          <ul class="volunteer-highlights">
-            <li>Represented 30+ Computer Science undergraduates, serving as the official liaison between students and academic faculty to streamline department communication.</li>
-            <li>Advocated for student needs during academic feedback sessions, resolving timetable conflicts and curriculum queries.</li>
-          </ul>
-        </div>
-
       </div>
     </section>
   `
