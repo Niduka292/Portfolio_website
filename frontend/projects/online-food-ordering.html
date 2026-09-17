@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Food Ordering System - Project Details</title>
     <link rel="stylesheet" href="../css/projects.css">
-</head>
+    <link rel="stylesheet" href="../css/glass.css">
+    </head>
 <body>
     <div class="project-detail-container">
         <!-- Header Section -->
@@ -29,10 +30,10 @@
                     <h2 class="section-heading">Project Overview</h2>
                     <div class="section-text-container">
                         <p class="section-text">
-                            The Online Food Ordering System is a simplified console-based application designed to simulate 
-                            restaurant order management. Built entirely in Java, this system demonstrates the practical 
-                            implementation of various data structures including LinkedList, ArrayDeque, PriorityQueue, and Stack. 
-                            The project showcases efficient order processing with priority handling, dynamic menu management, 
+                            The Online Food Ordering System is a simplified console-based application designed to simulate
+                            restaurant order management. Built entirely in Java, this system demonstrates the practical
+                            implementation of various data structures including LinkedList, ArrayDeque, PriorityQueue, and Stack.
+                            The project showcases efficient order processing with priority handling, dynamic menu management,
                             and comprehensive reporting capabilities.
                         </p>
                     </div>
@@ -145,43 +146,43 @@
                 <div class="challenge-item">
                     <h3 class="challenge-title">Priority Queue Management</h3>
                     <p class="challenge-text">
-                        <strong>Challenge:</strong> Implementing an efficient system that prioritizes premium customer 
-                        orders while ensuring normal orders are not indefinitely delayed. The system needed to balance 
+                        <strong>Challenge:</strong> Implementing an efficient system that prioritizes premium customer
+                        orders while ensuring normal orders are not indefinitely delayed. The system needed to balance
                         fair service with priority handling.<br><br>
-                        <strong>Solution:</strong> Utilized Java's PriorityQueue with a custom Comparator to assign 
-                        priority levels to orders. Premium orders were given higher priority values, ensuring they were 
-                        served first while normal orders were processed through a separate FIFO ArrayDeque to maintain 
+                        <strong>Solution:</strong> Utilized Java's PriorityQueue with a custom Comparator to assign
+                        priority levels to orders. Premium orders were given higher priority values, ensuring they were
+                        served first while normal orders were processed through a separate FIFO ArrayDeque to maintain
                         order fairness.
                     </p>
                 </div>
                 <div class="challenge-item">
                     <h3 class="challenge-title">Undo Action Implementation</h3>
                     <p class="challenge-text">
-                        <strong>Challenge:</strong> Creating a reliable undo mechanism that could revert various types 
+                        <strong>Challenge:</strong> Creating a reliable undo mechanism that could revert various types
                         of actions (add, remove, edit menu items, and serve orders) while maintaining data consistency.<br><br>
-                        <strong>Solution:</strong> Implemented a Stack-based (Deque) command pattern where each action 
-                        was stored as an object containing the action type and relevant data. The undo operation would 
+                        <strong>Solution:</strong> Implemented a Stack-based (Deque) command pattern where each action
+                        was stored as an object containing the action type and relevant data. The undo operation would
                         pop the last action and execute its reverse operation, ensuring proper state restoration.
                     </p>
                 </div>
                 <div class="challenge-item">
                     <h3 class="challenge-title">Custom Sorting Algorithm</h3>
                     <p class="challenge-text">
-                        <strong>Challenge:</strong> Efficiently sorting completed orders by total bill amount and menu 
+                        <strong>Challenge:</strong> Efficiently sorting completed orders by total bill amount and menu
                         items by popularity without using built-in Java sorting methods, as per project constraints.<br><br>
-                        <strong>Solution:</strong> Implemented custom Merge Sort algorithm with O(n log n) time complexity. 
-                        Created separate comparator logic for different sorting criteria (bill amount and sales frequency), 
+                        <strong>Solution:</strong> Implemented custom Merge Sort algorithm with O(n log n) time complexity.
+                        Created separate comparator logic for different sorting criteria (bill amount and sales frequency),
                         with performance logging using System.nanoTime() to verify efficiency.
                     </p>
                 </div>
                 <div class="challenge-item">
                     <h3 class="challenge-title">Data Structure Selection</h3>
                     <p class="challenge-text">
-                        <strong>Challenge:</strong> Choosing the most appropriate data structure for each functionality 
+                        <strong>Challenge:</strong> Choosing the most appropriate data structure for each functionality
                         while adhering to project constraints that limited available data structures.<br><br>
-                        <strong>Solution:</strong> Carefully analyzed the operations required for each feature. Used 
-                        LinkedList for menu items (frequent additions/deletions), ArrayDeque for normal orders (FIFO), 
-                        PriorityQueue for premium orders (priority-based), and Deque as Stack for undo operations (LIFO), 
+                        <strong>Solution:</strong> Carefully analyzed the operations required for each feature. Used
+                        LinkedList for menu items (frequent additions/deletions), ArrayDeque for normal orders (FIFO),
+                        PriorityQueue for premium orders (priority-based), and Deque as Stack for undo operations (LIFO),
                         optimizing for each specific use case.
                     </p>
                 </div>

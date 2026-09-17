@@ -88,8 +88,8 @@ body {
 .project-image-section {
   margin-top: 20px;
   margin-bottom: 40px;
-  margin-left: 120px; 
-  margin-right: 0; 
+  margin-left: 120px;
+  margin-right: 0;
   display: flex;
   justify-content: center;
   padding: 20px;
@@ -475,3 +475,22 @@ body {
     padding-left: 35px;
   }
 }
+/* Shared black and blue visual language with the portfolio. */
+body{background:#08090b;color:#f4f5f7;font-family:Inter,'Segoe UI',sans-serif}
+.project-detail-container{max-width:1136px}
+.project-title,.section-heading,.tech-badge{background:none;-webkit-text-fill-color:currentColor;color:#278ef5;text-shadow:none;letter-spacing:-.8px}
+.section-heading{border-color:#252930;color:#f4f5f7}
+.feature-card,.tech-item,.challenge-item{background:#101216;border-color:#252930;border-radius:10px}
+.feature-card:hover,.tech-item:hover,.challenge-item:hover{background:#13171d;border-color:#278ef5;box-shadow:none}
+.feature-card h3,.challenge-title,.challenge-text strong{color:#70b6fd}
+.feature-icon{background:#278ef5}
+.back-button,.project-link-btn,.project-link-btn.secondary{background:#101216;border:1px solid #303640;border-radius:6px}
+.back-button:hover,.project-link-btn:hover,.project-link-btn.secondary:hover{background:#278ef5;color:#08090b;border-color:#278ef5;box-shadow:none}
+.project-image-section{background:transparent;margin-left:40px;flex:1;min-width:0}
+.main-project-image{box-shadow:none;border:1px solid #252930}
+.main-project-image:hover{box-shadow:none}
+.project-footer,.learnings-list li{border-color:#252930}
+a:focus-visible{outline:2px solid #278ef5;outline-offset:5px}
+@media(max-width:1024px){.project-section-1{flex-direction:column}.project-image-section{margin:24px 0 0;padding:0;max-width:480px}.main-project-image{display:block}.section-text-container{max-width:none}}
+@media(max-width:480px){.features-grid,.tech-stack-list{grid-template-columns:minmax(0,1fr)}.project-title{overflow-wrap:anywhere}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important;transform:none!important}}

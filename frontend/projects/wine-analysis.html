@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wine Analysis - Project Details</title>
     <link rel="stylesheet" href="../css/projects.css">
-</head>
+    <link rel="stylesheet" href="../css/glass.css">
+    </head>
 <body>
     <div class="project-detail-container">
         <!-- Header Section -->
@@ -29,10 +30,10 @@
                     <h2 class="section-heading">Project Overview</h2>
                     <div class="section-text-container">
                         <p class="section-text">
-                            The Wine Analysis Dashboard is an interactive data visualization and analysis platform built to 
-                            explore wine reviews and characteristics. Leveraging Python's powerful data science libraries, 
-                            this project combines Natural Language Processing (NLP) techniques with interactive visualizations 
-                            using Plotly Dash. The application processes large datasets of wine reviews, extracts meaningful 
+                            The Wine Analysis Dashboard is an interactive data visualization and analysis platform built to
+                            explore wine reviews and characteristics. Leveraging Python's powerful data science libraries,
+                            this project combines Natural Language Processing (NLP) techniques with interactive visualizations
+                            using Plotly Dash. The application processes large datasets of wine reviews, extracts meaningful
                             insights, and presents them through an intuitive web-based dashboard.
                         </p>
                     </div>
@@ -133,44 +134,44 @@
                 <div class="challenge-item">
                     <h3 class="challenge-title">Large Dataset Processing</h3>
                     <p class="challenge-text">
-                        <strong>Challenge:</strong> Processing and analyzing large wine review datasets (100,000+ records) 
+                        <strong>Challenge:</strong> Processing and analyzing large wine review datasets (100,000+ records)
                         efficiently while maintaining responsive dashboard performance.<br><br>
-                        <strong>Solution:</strong> Implemented data preprocessing pipelines using Pandas with chunking 
-                        techniques for memory efficiency. Used data aggregation and caching strategies to pre-compute 
-                        common analyses, significantly reducing real-time computation overhead and improving dashboard 
+                        <strong>Solution:</strong> Implemented data preprocessing pipelines using Pandas with chunking
+                        techniques for memory efficiency. Used data aggregation and caching strategies to pre-compute
+                        common analyses, significantly reducing real-time computation overhead and improving dashboard
                         responsiveness.
                     </p>
                 </div>
                 <div class="challenge-item">
                     <h3 class="challenge-title">NLP Text Processing</h3>
                     <p class="challenge-text">
-                        <strong>Challenge:</strong> Extracting meaningful insights from unstructured wine review text 
+                        <strong>Challenge:</strong> Extracting meaningful insights from unstructured wine review text
                         data, including sentiment analysis and keyword extraction while handling wine-specific terminology.<br><br>
-                        <strong>Solution:</strong> Utilized NLTK and spaCy for text preprocessing, tokenization, and 
-                        sentiment analysis. Created custom wine vocabulary and stop words list to improve accuracy. 
-                        Implemented TF-IDF vectorization to identify key descriptive terms and trained a sentiment 
+                        <strong>Solution:</strong> Utilized NLTK and spaCy for text preprocessing, tokenization, and
+                        sentiment analysis. Created custom wine vocabulary and stop words list to improve accuracy.
+                        Implemented TF-IDF vectorization to identify key descriptive terms and trained a sentiment
                         classifier specific to wine reviews.
                     </p>
                 </div>
                 <div class="challenge-item">
                     <h3 class="challenge-title">Interactive Visualization Performance</h3>
                     <p class="challenge-text">
-                        <strong>Challenge:</strong> Creating responsive, interactive visualizations that update smoothly 
+                        <strong>Challenge:</strong> Creating responsive, interactive visualizations that update smoothly
                         when users apply filters or change parameters, despite working with large datasets.<br><br>
-                        <strong>Solution:</strong> Optimized Dash callbacks with proper memoization and implemented 
-                        client-side filtering where possible. Used Plotly's WebGL rendering for scatter plots with 
-                        large point counts and implemented pagination for tabular data displays to maintain smooth 
+                        <strong>Solution:</strong> Optimized Dash callbacks with proper memoization and implemented
+                        client-side filtering where possible. Used Plotly's WebGL rendering for scatter plots with
+                        large point counts and implemented pagination for tabular data displays to maintain smooth
                         user experience.
                     </p>
                 </div>
                 <div class="challenge-item">
                     <h3 class="challenge-title">Data Cleaning & Standardization</h3>
                     <p class="challenge-text">
-                        <strong>Challenge:</strong> Handling inconsistent data entries, missing values, and varying 
+                        <strong>Challenge:</strong> Handling inconsistent data entries, missing values, and varying
                         formats across different wine regions and vintages in the dataset.<br><br>
-                        <strong>Solution:</strong> Developed comprehensive data cleaning pipeline to handle missing 
-                        values, standardize country and region names, and normalize price ranges. Implemented validation 
-                        rules to identify and correct anomalies, ensuring data quality for accurate analysis and 
+                        <strong>Solution:</strong> Developed comprehensive data cleaning pipeline to handle missing
+                        values, standardize country and region names, and normalize price ranges. Implemented validation
+                        rules to identify and correct anomalies, ensuring data quality for accurate analysis and
                         visualization.
                     </p>
                 </div>

@@ -1,11 +1,15 @@
 import projectsData from "./projects-data.js";
-import techStackData from "./tech-stack-data.js";
+import techStackData from "./tech-stack-data.js?v=toolkit-3";
 
 const Projects = {
+  data() {
+    const categories = [...new Set(techStackData.map(tool => tool.category))];
+    return { techGroups: categories.map(name => ({ name, tools: techStackData.filter(tool => tool.category === name) })) };
+  },
   template: `
     <div class="projects-section">
       <div class="section-title">
-        <p>Portfolio Showcase</p>
+        <h2>Portfolio Showcase</h2>
       </div>
       <div class="section-intro">
         <p>
@@ -32,7 +36,7 @@ const Projects = {
 
       <br>
 
-      <div class="tech-stack">
+      <div class="tech-stack" id="tech-stack">
         <div class="projects-title-div">
           <div class="project-title-container">
             <div class="projects-header-1">
@@ -41,11 +45,24 @@ const Projects = {
               </svg>
             </div>
             <div class="projects-header-2">
-              <p>Tech Stack</p>
+              <h2>Technical Toolkit</h2>
             </div>
           </div>
         </div>
-        <div class="tech-stack-container" id="techStackContainer"></div>
+        <div class="tech-groups" id="techStackContainer">
+          <section v-for="group in techGroups" :key="group.name" class="tech-group" :aria-label="group.name">
+            <h3 class="tech-group-title">{{ group.name }}</h3>
+            <ul class="tech-stack-container">
+              <li v-for="tool in group.tools" :key="tool.name" class="tech-stack-component">
+                <div class="tech-stack-image" aria-hidden="true">
+                  <img v-if="tool.img" :src="tool.img" alt="" loading="lazy">
+                  <span v-else class="tech-stack-mark">{{ tool.mark }}</span>
+                </div>
+                <div class="tech-stack-name"><p>{{ tool.name }}</p></div>
+              </li>
+            </ul>
+          </section>
+        </div>
       </div>
     </div>
   `,
@@ -59,7 +76,7 @@ const Projects = {
       projectsHTML += `
         <div class="project-card">
           <div class="project-image">
-            <img src="${p.img}" alt="${p.title}">
+            <img src="${p.img}" alt="${p.title}" loading="lazy">
           </div>
           <div class="project-text">
             <div class="project-title">
@@ -81,24 +98,7 @@ const Projects = {
 
     projectsContainer.innerHTML = projectsHTML;
 
-    // TECH STACK SECTION - Grid layout without rows
-    const techContainer = document.getElementById("techStackContainer");
-    let techHTML = "";
 
-    techStackData.forEach(t => {
-      techHTML += `
-        <div class="tech-stack-component">
-          <div class="tech-stack-image">
-            <img src="${t.img}" alt="${t.name}">
-          </div>
-          <div class="tech-stack-name">
-            <p>${t.name}</p>
-          </div>
-        </div>
-      `;
-    });
-
-    techContainer.innerHTML = techHTML;
   }
 };
 
