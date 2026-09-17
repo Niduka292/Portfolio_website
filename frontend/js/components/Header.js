@@ -1,12 +1,23 @@
 const Header = {
+  data: () => ({ menuOpen: false }),
+  methods: {
+    closeMenu(restoreFocus = false) {
+      this.menuOpen = false;
+      if (restoreFocus) this.$refs.menuToggle.focus();
+    }
+  },
   template: `
     <header id="home">
-      <div class="header">
+      <div class="header" @keydown.esc="closeMenu(true)">
         <div class="header-name">
           <a href="#home" aria-label="Niduka home">Niduka<span aria-hidden="true">.</span></a>
         </div>
-        <div class="nav-bar">
-          <nav id="nav-menu" class="nav-menu">
+        <button ref="menuToggle" class="nav-toggle" type="button" :aria-expanded="menuOpen" aria-controls="nav-menu" :aria-label="menuOpen ? 'Close navigation menu' : 'Open navigation menu'" @click="menuOpen = !menuOpen">
+          <svg v-if="!menuOpen" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg v-else width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+        <div class="nav-bar" :class="{ 'is-open': menuOpen }">
+          <nav id="nav-menu" class="nav-menu" aria-label="Main navigation" @click="closeMenu()">
             <a class="nav-menu-btn" href="#about">About</a>
             <a class="nav-menu-btn" href="#projects">Projects</a>
             <a class="nav-menu-btn" href="#certifications">Certifications</a>

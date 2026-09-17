@@ -243,3 +243,46 @@ input, textarea { background: #090b0e; }
 @media (prefers-reduced-motion: reduce) {
   .split-text-letter { animation: none; opacity: 1; transform: none; }
 }
+
+/* Collapsible mobile navigation; desktop links remain visible. */
+.nav-toggle { display: none; }
+@media (max-width: 700px) {
+  .nav-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-left: auto;
+    padding: 0;
+    color: #f4f5f7;
+    background: #101216;
+    border: 1px solid #303640;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .nav-toggle:hover { border-color: #278ef5; background: #182536; }
+  .header .nav-bar { display: none; width: 100%; }
+  .header .nav-bar.is-open { display: block; }
+  .header .nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    padding: 10px;
+    border: 1px solid #303640;
+    border-radius: 12px;
+    background: #101216;
+  }
+  .header .nav-menu-btn, .header .nav-menu-btn:last-child {
+    display: block;
+    margin: 0;
+    padding: 12px 14px;
+    min-height: 44px;
+    border: 0;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #d1d9e6;
+  }
+  .header .nav-menu-btn:hover { background: #182536; color: #fff; }
+}

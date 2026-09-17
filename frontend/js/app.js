@@ -1,5 +1,5 @@
 import Academic from "./components/Academic.js?v=portfolio-7"
-import Header from "./components/Header.js?v=portfolio-8"
+import Header from "./components/Header.js?v=portfolio-9"
 import Footer from "./components/Footer.js"
 import Contact from "./components/Contact.js"
 import About from "./components/About.js?v=portfolio-5"
