@@ -1,4 +1,4 @@
-import Academic from "./components/Academic.js?v=portfolio-7"
+import Academic from "./components/Academic.js?v=portfolio-10"
 import Header from "./components/Header.js?v=portfolio-9"
 import Footer from "./components/Footer.js"
 import Contact from "./components/Contact.js"

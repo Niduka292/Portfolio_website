@@ -144,6 +144,8 @@ body { isolation: isolate; }
   border-color: rgba(39, 142, 245, .4);
 }
 .tech-group .tech-stack-image img { width: 30px; height: 30px; }
+/* Compensate for the PostgreSQL asset's generous transparent margins. */
+.tech-group .tech-stack-image img[src$="/postgresql.png"] { transform: scale(2.3); }
 .tech-group .tech-stack-name p {
   font-size: 10px;
   line-height: 1.4;

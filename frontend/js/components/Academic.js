@@ -10,7 +10,7 @@ export default {
                 <p class="academic-institution">University of Sri Jayewardenepura</p>
                 <ul class="academic-tags">
                     <li class="academic-tag">Object Oriented Programming</li>
-                    <li class="academic-tag">Database design</li>
+                    <li class="academic-tag">Database Management</li>
                     <li class="academic-tag">Data Structures and Algorithms</li>
                     <li class="academic-tag">Machine Learning</li>
                     <li class="academic-tag">Software Engineering</li>

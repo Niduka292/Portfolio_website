@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskBridge - Microservices Freelance Marketplace</title>
+    <link rel="stylesheet" href="../css/projects.css">
+    <link rel="stylesheet" href="../css/glass.css">
+    <style>
+        /* Keep the screenshot at its natural aspect ratio beside the overview. */
+        .project-section-1 { align-items: flex-start; gap: 40px; }
+        .project-section-text { flex: 1; min-width: 0; }
+        .project-image-section {
+            flex: 1;
+            display: block;
+            width: 100%;
+            max-width: 520px;
+            margin: 20px 0 0;
+            padding: 0;
+        }
+        .main-project-image {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+        @media (max-width: 1024px) {
+            .project-section-1 { gap: 24px; }
+            .project-image-section { flex: none; margin: 0; max-width: 100%; }
+        }
+    </style>
+    </head>
+
+<body>
+    <div class="project-detail-container">
+        <div class="project-header">
+            <div class="back-btn-container">
+                <a href="../index.html" class="back-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+                    </svg>
+                    Back to Portfolio
+                </a>
+            </div>
+            <h1 class="project-title">TaskBridge</h1>
+            <p class="project-subtitle">A service-oriented freelance task marketplace built with Spring Boot microservices, Next.js, PostgreSQL, Redis, Kong, Docker, Kubernetes, and Jenkins.</p>
+        </div>
+
+        <div class="project-content">
+            <section class="project-section-1">
+                <div class="project-section-text">
+                    <h2 class="section-heading">Project Overview</h2>
+                    <div class="section-text-container">
+                        <p class="section-text">TaskBridge is a team-built freelance task marketplace designed around service-oriented and microservices principles. Clients can create tasks, freelancers can browse tasks and submit bids, and clients can accept a bid to assign work. The backend separates user management, task and bidding logic, payments, and notifications into independently responsible services. Kong provides a single API entry point, Redis supports asynchronous event communication, PostgreSQL provides persistent relational storage, Docker containerizes the backend, Kubernetes orchestrates the local deployment, and Jenkins automates the Continuous Integration build process.</p>
+                    </div>
+                </div>
+                <div class="project-image-section">
+                    <img src="../assets/taskbridge.png" alt="TaskBridge Freelance Marketplace Screenshot" class="main-project-image">
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h2 class="section-heading">Key Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card"><div class="feature-icon">⚡</div><h3>Task & Bid Marketplace</h3><p>Clients can create freelance tasks while freelancers browse available work and submit bids. Bid acceptance assigns the selected freelancer and moves the task into its in-progress lifecycle.</p></div>
+                    <div class="feature-card"><div class="feature-icon">🔐</div><h3>JWT Authentication</h3><p>User registration and login are handled by the User Service. Signed JWTs are used for stateless authentication and authenticated backend requests across protected service endpoints.</p></div>
+                    <div class="feature-card"><div class="feature-icon">💳</div><h3>Escrow Payment Workflow</h3><p>Accepting a bid triggers creation of a pending escrow transaction. The payment lifecycle supports PENDING → HELD → RELEASED states, with PayHere Sandbox integration used for payment initiation and callback handling.</p></div>
+                    <div class="feature-card"><div class="feature-icon">📨</div><h3>Event-Driven Communication</h3><p>Task Service publishes a BID_ACCEPTED event through Redis. Payment Service consumes the event and creates the related escrow transaction without requiring a direct synchronous payment-service call.</p></div>
+                    <div class="feature-card"><div class="feature-icon">🚪</div><h3>Kong API Gateway</h3><p>Kong acts as the single backend entry point and routes requests to User, Task, Payment, and Notification services. Gateway-level rate limiting provides a centralized traffic-control mechanism.</p></div>
+                    <div class="feature-card"><div class="feature-icon">☸</div><h3>Containerized Deployment</h3><p>Backend services and infrastructure are containerized with Docker and orchestrated on a local Docker Desktop Kubernetes cluster using Deployments, Services, a dedicated namespace, and persistent storage.</p></div>
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h2 class="section-heading">Technologies Used</h2>
+                <div class="tech-stack-list">
+                    <div class="tech-item"><div class="tech-badge">Next.js + TypeScript</div><p>Frontend application built with the Next.js App Router, TypeScript, and Tailwind CSS. It provides registration, login, task creation, task browsing, bidding, bid acceptance, and payment-related user flows.</p></div>
+                    <div class="tech-item"><div class="tech-badge">Spring Boot</div><p>Primary backend framework for the User, Task, and Payment microservices. Services follow controller-service-repository layering and expose REST APIs for their individual business responsibilities.</p></div>
+                    <div class="tech-item"><div class="tech-badge">PostgreSQL</div><p>Main relational persistence layer. User and Task data use separate logical databases on the main PostgreSQL instance, while Payment Service uses a separate PostgreSQL instance for escrow and payment data.</p></div>
+                    <div class="tech-item"><div class="tech-badge">Redis</div><p>Used for asynchronous event-driven communication between services. The main implemented flow publishes BID_ACCEPTED from Task Service and consumes it in Payment Service.</p></div>
+                    <div class="tech-item"><div class="tech-badge">Kong Gateway</div><p>Provides a single backend entry point and route forwarding to individual microservices, reducing the need for the frontend to know every service address. Rate limiting is configured at gateway level.</p></div>
+                    <div class="tech-item"><div class="tech-badge">Docker + Compose</div><p>Dockerfiles package backend applications into container images, while Docker Compose runs the microservices together with Kong, Redis, and PostgreSQL. Named volumes persist database data independently of container lifecycles.</p></div>
+                    <div class="tech-item"><div class="tech-badge">Kubernetes</div><p>Local orchestration using Docker Desktop Kubernetes. Deployments manage application pods, Services provide internal discovery, and PersistentVolumeClaims provide persistent database storage.</p></div>
+                    <div class="tech-item"><div class="tech-badge">Jenkins + Maven</div><p>Jenkins implements Continuous Integration by checking out the GitHub repository, building Spring Boot services with Maven, producing JAR artifacts, and building Docker images. Kubernetes deployment remains manual.</p></div>
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h2 class="section-heading">Architecture & Service Responsibilities</h2>
+                <div class="challenge-item"><h3 class="challenge-title">User Service</h3><p class="challenge-text">Responsible for registration, login, JWT generation, authentication, and user/profile operations. Other protected backend operations rely on authenticated identity rather than trusting arbitrary client-supplied user IDs.</p></div>
+                <div class="challenge-item"><h3 class="challenge-title">Task Service</h3><p class="challenge-text">Owns tasks, bids, task lifecycle rules, and freelancer assignment. When a client accepts a bid, the task is assigned to the selected freelancer, changes to IN_PROGRESS, and a BID_ACCEPTED event is published.</p></div>
+                <div class="challenge-item"><h3 class="challenge-title">Payment Service</h3><p class="challenge-text">Consumes accepted-bid events, creates escrow transactions, generates PayHere payment initiation parameters, validates payment callbacks, moves successful payments to HELD, and supports authorized release to RELEASED.</p></div>
+                <div class="challenge-item"><h3 class="challenge-title">Notification Service</h3><p class="challenge-text">A separate Node.js service was integrated for event-based notification persistence. It forms part of the broader service architecture, although the core demonstrated workflow focuses on User, Task, and Payment services.</p></div>
+            </section>
+
+            <section class="project-section">
+                <h2 class="section-heading">Challenges & Solutions</h2>
+                <div class="challenge-item"><h3 class="challenge-title">Reducing Coupling Between Task and Payment Services</h3><p class="challenge-text"><strong>Challenge:</strong> Direct REST communication would make bid acceptance more dependent on immediate Payment Service availability.<br><br><strong>Solution:</strong> Implemented asynchronous Redis event communication. Task Service publishes BID_ACCEPTED and Payment Service independently consumes the event to create the pending escrow transaction.</p></div>
+                <div class="challenge-item"><h3 class="challenge-title">Consistent Authentication Across Services</h3><p class="challenge-text"><strong>Challenge:</strong> Multiple services needed to validate the same application JWTs consistently.<br><br><strong>Solution:</strong> Configured a shared sufficiently strong JWT signing secret for the relevant backend services and kept application JWT validation within the services rather than relying on Kong to issue the application's authentication tokens.</p></div>
+                <div class="challenge-item"><h3 class="challenge-title">Container Networking & Database Configuration</h3><p class="challenge-text"><strong>Challenge:</strong> Microservices cannot use localhost to reach databases or other containers because localhost refers to the current container.<br><br><strong>Solution:</strong> Used Docker Compose/Kubernetes service names such as postgres, redis, user-service, and payment-postgres as network hostnames and configured service-specific environment variables.</p></div>
+                <div class="challenge-item"><h3 class="challenge-title">Persistent Database Storage</h3><p class="challenge-text"><strong>Challenge:</strong> Database information must survive container or pod recreation.<br><br><strong>Solution:</strong> Docker Compose uses named volumes such as postgres_data and payment-pgdata, while Kubernetes uses PersistentVolumeClaims to decouple persistent data from the lifecycle of database containers/pods.</p></div>
+                <div class="challenge-item"><h3 class="challenge-title">Automating Repeatable Builds</h3><p class="challenge-text"><strong>Challenge:</strong> Building several microservices and their Docker images manually is repetitive and error-prone.<br><br><strong>Solution:</strong> Added a Jenkins pipeline that checks out source code, runs Maven builds for the Spring Boot services, generates JAR artifacts, and builds the Docker images. Deployment is intentionally kept separate/manual in the current implementation.</p></div>
+            </section>
+
+            <section class="project-section">
+                <h2 class="section-heading">Key Learnings</h2>
+                <ul class="learnings-list">
+                    <li>Applied service-oriented and microservices principles by separating business capabilities into independently responsible backend services.</li>
+                    <li>Learned the practical differences between synchronous REST communication and asynchronous event-driven communication using Redis.</li>
+                    <li>Implemented stateless JWT-based authentication across a distributed backend architecture.</li>
+                    <li>Gained hands-on experience with Dockerfiles, Docker Compose networking, environment configuration, and persistent named volumes.</li>
+                    <li>Deployed a multi-service backend to Kubernetes and worked with namespaces, Deployments, Services, pods, port forwarding, health probes, and PersistentVolumeClaims.</li>
+                    <li>Implemented a Jenkins CI pipeline combining GitHub source control, Maven builds, JAR artifacts, and Docker image creation.</li>
+                    <li>Understood the distinction between Continuous Integration and fully automated Continuous Deployment; the current project automates builds while Kubernetes deployment remains manual.</li>
+                    <li>Practiced debugging distributed-system issues across gateways, service authentication, container networking, database connectivity, and Kubernetes configuration.</li>
+                </ul>
+            </section>
+
+            <section class="project-section">
+                <h2 class="section-heading">Project Links</h2>
+                <div class="project-links">
+                    <a href="https://github.com/Niduka292/TaskBridge" class="project-link-btn" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+                </div>
+            </section>
+        </div>
+
+        <footer class="project-footer"><p>&copy; 2026 Niduka Jayathunga. All rights reserved.</p></footer>
+    </div>
+</body>
+
+</html>

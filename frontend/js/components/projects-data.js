@@ -12,6 +12,12 @@ const projectsData = [
     link: "/projects/email-application.html"
   },
   {
+    title: "TaskBridge",
+    description: "Microservices-based freelance task marketplace built with Spring Boot, Next.js, Docker, Kubernetes, Kong, Redis and Jenkins.",
+    img: "./assets/taskbridge.png",
+    link: "/projects/taskbridge.html"
+  },
+  {
     title: "Airplane Ticket Booking System",
     description: "Desktop-based Airplane Ticket Booking Management System developed using JavaFX, Java and PostgreSQL.",
     img: "./assets/airplane-ticket-booking.png",
