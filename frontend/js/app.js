@@ -4,7 +4,7 @@ import Footer from "./components/Footer.js"
 import Contact from "./components/Contact.js"
 import About from "./components/About.js?v=portfolio-5"
 import Projects from "./components/Projects.js?v=toolkit-3"
-import Volunteer from "./components/Volunteer.js"
+import Volunteer from "./components/Volunteer.js?v=volunteer-details-2"
 import Certifications from "./components/Certifications.js?v=portfolio-4"
 import { createApp } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
 
@@ -30,6 +30,7 @@ const PortfolioApp = {
                 <section id="academic"><Academic/></section>
                 <section id="projects"><Projects/></section>
                 <section id="certifications"><Certifications/></section>
+                <section id="volunteer"><Volunteer/></section>
                 <section id="contact"><Contact/></section>
             </main>
             <Footer/>

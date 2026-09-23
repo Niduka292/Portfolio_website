@@ -1,4 +1,58 @@
 /* Shared atmosphere and glass surfaces for the portfolio and project pages. */
+.volunteer-organization { display: flex; align-items: center; gap: 18px; margin-bottom: 28px; }
+.volunteer-logo { width: 56px; height: 56px; object-fit: contain; background: #fff; padding: 6px; border-radius: 10px; flex-shrink: 0; }
+.volunteer-organization h3 { margin: 0 0 8px; font-size: 18px; line-height: 1.5; }
+.volunteer-organization p { margin: 0; font-size: 14px; }
+.volunteer-container { display: grid; gap: 22px; }
+.volunteer-container > .volunteer-card { margin: 0; }
+.volunteer-card {
+  padding: 30px;
+  border: 1px solid rgba(161, 197, 240, .18);
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(166, 204, 255, .075), transparent), rgba(14, 19, 28, .7);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  box-shadow: inset 0 1px 0 rgba(220, 237, 255, .07);
+}
+.volunteer-card .card-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; }
+.volunteer-role { margin: 0 0 12px; font-size: 20px; line-height: 1.5; }
+.volunteer-org { color: #79baff; margin: 0; font-size: 14px; }
+.volunteer-location { font-size: 14px; margin: 6px 0 0; }
+.volunteer-tag { padding: 5px 12px; white-space: nowrap; border: 1px solid #294564; border-radius: 999px; color: #a9c9ec; font-size: 12px; }
+.volunteer-highlights { color: var(--muted, #a1a8b5); padding-left: 20px; margin: 24px 0; font-size: 15px; line-height: 1.85; }
+.volunteer-highlights li + li { margin-top: 8px; }
+@media (max-width: 700px) {
+  #volunteer { padding-inline: 16px; }
+  .volunteer-container { gap: 16px; }
+  .volunteer-card { padding: 18px; border-radius: 12px; }
+  .volunteer-card .card-header {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 6px 10px;
+  }
+  .volunteer-card .card-header-main,
+  .volunteer-card .role-title-group { display: contents; }
+  .volunteer-role {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    margin: 0 0 2px;
+    font-size: 17px;
+    line-height: 1.4;
+  }
+  .volunteer-location { grid-column: 1 / -1; margin: 0; font-size: 13px; line-height: 1.5; }
+  .volunteer-card .volunteer-location:first-of-type,
+  .representative-card .volunteer-location { grid-row: 2; }
+  .volunteer-org { grid-column: 1; grid-row: 3; font-size: 12px; line-height: 1.5; }
+  .volunteer-tag { grid-column: 2; grid-row: 3; padding: 3px 9px; font-size: 11px; }
+  .volunteer-highlights { margin: 14px 0; padding-left: 16px; font-size: 14px; line-height: 1.6; }
+  .volunteer-highlights li + li { margin-top: 6px; }
+  .volunteer-skills { gap: 6px; }
+  .volunteer-skills .academic-tag { padding: 5px 10px; font-size: 12px; }
+  .volunteer-section .section-intro p { margin-bottom: 22px; }
+  .volunteer-organization { align-items: flex-start; gap: 14px; }
+  .volunteer-organization h3 { font-size: 16px; }
+}
 .hero-profile { position: relative; transition: transform .35s ease; }
 .work-status {
   position: absolute;
@@ -287,4 +341,28 @@ input, textarea { background: #090b0e; }
     color: #d1d9e6;
   }
   .header .nav-menu-btn:hover { background: #182536; color: #fff; }
+}
+
+/* Responsibilities are optional on mobile and always visible on desktop. */
+.volunteer-details-toggle { display: none; }
+@media (max-width: 700px) {
+  .volunteer-details-toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 44px;
+    margin: 8px 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #79baff;
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  .volunteer-details-toggle:hover { color: #c3dfff; }
+  .volunteer-card .volunteer-details { display: none; }
+  .volunteer-card .volunteer-details.is-expanded { display: block; }
+  .volunteer-details .volunteer-highlights { margin-top: 0; }
 }
