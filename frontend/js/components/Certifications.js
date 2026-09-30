@@ -1,13 +1,22 @@
 import certifications from './certifications-data.js?v=portfolio-4';
 
 export default {
-    data: () => ({ certifications }),
+    data: () => ({
+        certifications,
+        issuerLogos: {
+            'AWS Academy': './assets/aws-academy-logo.png',
+            'Cisco Networking Academy': './assets/cisco-networking-academy-logo.jpg'
+        }
+    }),
     template: `
         <div class="section-title"><h2>Certifications</h2></div>
         <div class="section-intro"><p>Learning & professional development</p></div>
         <div v-if="certifications.length" class="certifications-grid">
             <article v-for="certificate in certifications" :key="certificate.title + certificate.issuer" class="certificate-card">
-                <span class="certificate-icon" aria-hidden="true">✧</span>
+                <span class="certificate-icon" :class="{ 'certificate-icon-logo': issuerLogos[certificate.issuer] }" aria-hidden="true">
+                    <img v-if="issuerLogos[certificate.issuer]" :src="issuerLogos[certificate.issuer]" alt="" width="46" height="46">
+                    <template v-else>✧</template>
+                </span>
                 <p class="certificate-issuer">{{ certificate.issuer }}</p>
                 <h3>{{ certificate.title }}</h3>
                 <p v-if="certificate.date">{{ certificate.date }}</p>

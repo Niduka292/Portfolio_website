@@ -5,7 +5,7 @@ import Contact from "./components/Contact.js"
 import About from "./components/About.js?v=portfolio-5"
 import Projects from "./components/Projects.js?v=toolkit-3"
 import Volunteer from "./components/Volunteer.js?v=volunteer-details-2"
-import Certifications from "./components/Certifications.js?v=portfolio-4"
+import Certifications from "./components/Certifications.js?v=portfolio-5"
 import { createApp } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
 
 const PortfolioApp = {
