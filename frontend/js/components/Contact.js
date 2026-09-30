@@ -5,6 +5,7 @@ const Contact = {
             email:"",
             message:"",
             successMsg:"",
+            hasError: false,
             isSubmitting: false
         }
     },
@@ -104,7 +105,7 @@ const Contact = {
                                 </div>
                             </button>
                         </form>
-                        <p v-if="successMsg" class="success-msg" :class="{'error-msg': successMsg.includes('wrong')}">{{successMsg}}</p>
+                        <p v-if="successMsg" class="success-msg" :class="{'error-msg': hasError}" role="status" aria-live="polite">{{successMsg}}</p>
                     </div>
                 </div>
             </div>
@@ -117,7 +118,9 @@ const Contact = {
             if (this.isSubmitting) return;
 
             // Basic validation
-            if (!this.name || !this.email || !this.message) {
+            this.hasError = false;
+            if (!this.name.trim() || !this.email.trim() || !this.message.trim()) {
+                this.hasError = true;
                 this.successMsg = "Please fill in all fields";
                 return;
             }
@@ -140,21 +143,19 @@ const Contact = {
 
                 const data = await response.json();
 
-                if (data.success) {
+                if (response.ok && data.success) {
                     this.successMsg = "Your message was sent successfully!";
                     // Clear form
                     this.name = "";
                     this.email = "";
                     this.message = "";
 
-                    // Clear success message after 5 seconds
-                    setTimeout(() => {
-                        this.successMsg = "";
-                    }, 5000);
                 } else {
-                    this.successMsg = (data.message || "Something went wrong");
+                    this.hasError = true;
+                    this.successMsg = (data.msg || data.message || "Something went wrong");
                 }
             } catch (error) {
+                this.hasError = true;
                 console.error('Error sending message:', error);
                 this.successMsg = "Failed to send message. Please try again.";
             } finally {

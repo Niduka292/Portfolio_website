@@ -15,3 +15,7 @@ backend/.env
 # MacOS
 .DS_Store
 .vercel
+
+.env.*
+CONTACT_SETUP.md
+tests/
