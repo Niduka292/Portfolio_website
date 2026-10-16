@@ -69,7 +69,7 @@ const Header = {
           </div>
         </div>
         <div class="profile-pic hero-profile">
-          <img src="./assets/profile-pic.png" alt="Niduka Jayathunga" fetchpriority="high">
+          <img src="./assets/profile-pic.webp" alt="Niduka Jayathunga" fetchpriority="high">
           <span class="work-status"><span class="work-status-dot" aria-hidden="true"></span>Open to work</span>
         </div>
       </div>

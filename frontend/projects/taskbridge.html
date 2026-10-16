@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TaskBridge - Microservices Freelance Marketplace</title>
+    <title>TaskBridge - AWS-Hosted Microservices Freelance Marketplace</title>
     <link rel="stylesheet" href="../css/projects.css">
     <link rel="stylesheet" href="../css/glass.css">
     <style>
@@ -25,12 +25,19 @@
             height: auto;
             object-fit: contain;
         }
+        .status-note {
+            margin-top: 16px;
+            padding: 12px 16px;
+            border-left: 3px solid #38bdf8;
+            border-radius: 8px;
+            background: rgba(56, 189, 248, 0.08);
+        }
         @media (max-width: 1024px) {
             .project-section-1 { gap: 24px; }
             .project-image-section { flex: none; margin: 0; max-width: 100%; }
         }
     </style>
-    </head>
+</head>
 
 <body>
     <div class="project-detail-container">
@@ -44,7 +51,7 @@
                 </a>
             </div>
             <h1 class="project-title">TaskBridge</h1>
-            <p class="project-subtitle">A service-oriented freelance task marketplace built with Spring Boot microservices, Next.js, PostgreSQL, Redis, Kong, Docker, Kubernetes, and Jenkins.</p>
+            <p class="project-subtitle">A freelance task marketplace built with Next.js, Spring Boot microservices, PostgreSQL, Redis, Kong, Docker, and AWS deployment services.</p>
         </div>
 
         <div class="project-content">
@@ -52,7 +59,11 @@
                 <div class="project-section-text">
                     <h2 class="section-heading">Project Overview</h2>
                     <div class="section-text-container">
-                        <p class="section-text">TaskBridge is a team-built freelance task marketplace designed around service-oriented and microservices principles. Clients can create tasks, freelancers can browse tasks and submit bids, and clients can accept a bid to assign work. The backend separates user management, task and bidding logic, payments, and notifications into independently responsible services. Kong provides a single API entry point, Redis supports asynchronous event communication, PostgreSQL provides persistent relational storage, Docker containerizes the backend, Kubernetes orchestrates the local deployment, and Jenkins automates the Continuous Integration build process.</p>
+                        <p class="section-text">TaskBridge is a team-built freelance task marketplace for connecting clients with freelancers. Clients can post tasks, freelancers can browse listings and submit bids, and clients can accept bids to assign work. The backend separates user management, task and bidding logic, payments, and notifications into services with distinct responsibilities.</p>
+                        <p class="section-text">The application is hosted using a split deployment: the Next.js frontend is deployed on Vercel, while backend services and supporting infrastructure run in Docker Compose on an AWS EC2 instance. Nginx terminates HTTPS for the public API domain and forwards requests to Kong, which routes requests to the relevant microservice. DuckDNS provides the domain and Let's Encrypt provides the TLS certificate.</p>
+                        <div class="status-note">
+                            <p class="section-text"><strong>Deployment status:</strong> The frontend and HTTPS backend endpoint are hosted. AWS CodeBuild, Amazon ECR, and CodePipeline are being configured for automated build and deployment. PostgreSQL currently runs on EC2; migration to Amazon RDS is planned for a later stage.</p>
+                        </div>
                     </div>
                 </div>
                 <div class="project-image-section">
@@ -64,43 +75,47 @@
                 <h2 class="section-heading">Key Features</h2>
                 <div class="features-grid">
                     <div class="feature-card"><div class="feature-icon">⚡</div><h3>Task & Bid Marketplace</h3><p>Clients can create freelance tasks while freelancers browse available work and submit bids. Bid acceptance assigns the selected freelancer and moves the task into its in-progress lifecycle.</p></div>
-                    <div class="feature-card"><div class="feature-icon">🔐</div><h3>JWT Authentication</h3><p>User registration and login are handled by the User Service. Signed JWTs are used for stateless authentication and authenticated backend requests across protected service endpoints.</p></div>
-                    <div class="feature-card"><div class="feature-icon">💳</div><h3>Escrow Payment Workflow</h3><p>Accepting a bid triggers creation of a pending escrow transaction. The payment lifecycle supports PENDING → HELD → RELEASED states, with PayHere Sandbox integration used for payment initiation and callback handling.</p></div>
+                    <div class="feature-card"><div class="feature-icon">🔐</div><h3>JWT Authentication</h3><p>The User Service handles registration and login. Signed JWTs support stateless authentication for protected backend operations across the services.</p></div>
+                    <div class="feature-card"><div class="feature-icon">💳</div><h3>Escrow Payment Workflow</h3><p>The payment workflow creates a pending escrow after bid acceptance and supports PENDING → HELD → RELEASED states. PayHere checkout initiation and signature-validated callback handling are implemented in the Payment Service.</p></div>
                     <div class="feature-card"><div class="feature-icon">📨</div><h3>Event-Driven Communication</h3><p>Task Service publishes a BID_ACCEPTED event through Redis. Payment Service consumes the event and creates the related escrow transaction without requiring a direct synchronous payment-service call.</p></div>
-                    <div class="feature-card"><div class="feature-icon">🚪</div><h3>Kong API Gateway</h3><p>Kong acts as the single backend entry point and routes requests to User, Task, Payment, and Notification services. Gateway-level rate limiting provides a centralized traffic-control mechanism.</p></div>
-                    <div class="feature-card"><div class="feature-icon">☸</div><h3>Containerized Deployment</h3><p>Backend services and infrastructure are containerized with Docker and orchestrated on a local Docker Desktop Kubernetes cluster using Deployments, Services, a dedicated namespace, and persistent storage.</p></div>
+                    <div class="feature-card"><div class="feature-icon">🚪</div><h3>Kong API Gateway</h3><p>Kong is the central backend entry point, routing requests to User, Task, Payment, and Notification services. Rate limiting provides a centralized traffic-control mechanism.</p></div>
+                    <div class="feature-card"><div class="feature-icon">🌐</div><h3>AWS HTTPS Hosting</h3><p>The frontend is hosted on Vercel. Backend traffic reaches AWS EC2 through a DuckDNS domain with a Let's Encrypt TLS certificate and Nginx reverse proxy before reaching Kong.</p></div>
                 </div>
             </section>
 
             <section class="project-section">
                 <h2 class="section-heading">Technologies Used</h2>
                 <div class="tech-stack-list">
-                    <div class="tech-item"><div class="tech-badge">Next.js + TypeScript</div><p>Frontend application built with the Next.js App Router, TypeScript, and Tailwind CSS. It provides registration, login, task creation, task browsing, bidding, bid acceptance, and payment-related user flows.</p></div>
+                    <div class="tech-item"><div class="tech-badge">Next.js + TypeScript</div><p>Frontend application built with the Next.js App Router, TypeScript, and Tailwind CSS. It provides registration, login, task creation and browsing, bidding, profiles, and payment-related user flows. The frontend is deployed on Vercel.</p></div>
                     <div class="tech-item"><div class="tech-badge">Spring Boot</div><p>Primary backend framework for the User, Task, and Payment microservices. Services follow controller-service-repository layering and expose REST APIs for their individual business responsibilities.</p></div>
-                    <div class="tech-item"><div class="tech-badge">PostgreSQL</div><p>Main relational persistence layer. User and Task data use separate logical databases on the main PostgreSQL instance, while Payment Service uses a separate PostgreSQL instance for escrow and payment data.</p></div>
-                    <div class="tech-item"><div class="tech-badge">Redis</div><p>Used for asynchronous event-driven communication between services. The main implemented flow publishes BID_ACCEPTED from Task Service and consumes it in Payment Service.</p></div>
-                    <div class="tech-item"><div class="tech-badge">Kong Gateway</div><p>Provides a single backend entry point and route forwarding to individual microservices, reducing the need for the frontend to know every service address. Rate limiting is configured at gateway level.</p></div>
-                    <div class="tech-item"><div class="tech-badge">Docker + Compose</div><p>Dockerfiles package backend applications into container images, while Docker Compose runs the microservices together with Kong, Redis, and PostgreSQL. Named volumes persist database data independently of container lifecycles.</p></div>
-                    <div class="tech-item"><div class="tech-badge">Kubernetes</div><p>Local orchestration using Docker Desktop Kubernetes. Deployments manage application pods, Services provide internal discovery, and PersistentVolumeClaims provide persistent database storage.</p></div>
-                    <div class="tech-item"><div class="tech-badge">Jenkins + Maven</div><p>Jenkins implements Continuous Integration by checking out the GitHub repository, building Spring Boot services with Maven, producing JAR artifacts, and building Docker images. Kubernetes deployment remains manual.</p></div>
+                    <div class="tech-item"><div class="tech-badge">PostgreSQL</div><p>Relational persistence for user, task, and payment data. PostgreSQL currently runs in Docker containers on EC2 with persistent volumes. Amazon RDS for PostgreSQL is a planned future migration, not the current database host.</p></div>
+                    <div class="tech-item"><div class="tech-badge">Redis</div><p>Used for asynchronous event-driven communication between services. The implemented flow publishes BID_ACCEPTED from Task Service and consumes it in Payment Service.</p></div>
+                    <div class="tech-item"><div class="tech-badge">Kong Gateway</div><p>Provides a single backend entry point and forwards requests to individual microservices. It applies gateway-level rate limiting so the frontend does not need to address each service directly.</p></div>
+                    <div class="tech-item"><div class="tech-badge">Docker + Compose</div><p>Dockerfiles package backend applications into images, while Docker Compose runs the services and supporting infrastructure together on EC2. Named volumes preserve database data across container recreation.</p></div>
+                    <div class="tech-item"><div class="tech-badge">AWS EC2 + Nginx</div><p>An Ubuntu EC2 instance hosts the Docker Compose backend. Nginx provides the public reverse-proxy endpoint and TLS termination for the DuckDNS domain, with Let's Encrypt certificate management.</p></div>
+                    <div class="tech-item"><div class="tech-badge">DuckDNS + Let's Encrypt</div><p>DuckDNS maps the public API hostname to the EC2 Elastic IP. A Let's Encrypt certificate enables HTTPS for browser-to-backend API requests.</p></div>
+                    <div class="tech-item"><div class="tech-badge">CodeBuild + ECR + CodePipeline</div><p>AWS CI/CD setup in progress: CodeBuild is being configured to build container images, ECR stores service and gateway images, and CodePipeline is intended to coordinate source, build, and deployment stages. Automated EC2 deployment should be considered complete only after the pipeline is verified end to end.</p></div>
+                    <div class="tech-item"><div class="tech-badge">Jenkins + Maven</div><p>Jenkins is also used locally for Continuous Integration, checking out source code, building Spring Boot services with Maven, producing JAR artifacts, and building Docker images. The AWS pipeline is the next step toward cloud-based automation.</p></div>
                 </div>
             </section>
 
             <section class="project-section">
                 <h2 class="section-heading">Architecture & Service Responsibilities</h2>
-                <div class="challenge-item"><h3 class="challenge-title">User Service</h3><p class="challenge-text">Responsible for registration, login, JWT generation, authentication, and user/profile operations. Other protected backend operations rely on authenticated identity rather than trusting arbitrary client-supplied user IDs.</p></div>
+                <div class="challenge-item"><h3 class="challenge-title">Frontend & Public API</h3><p class="challenge-text">The Next.js frontend is hosted on Vercel and calls the backend using the HTTPS endpoint <strong>https://task-bridge.duckdns.org</strong>. Nginx receives public HTTP/HTTPS traffic and proxies API requests to Kong. The frontend's allowed origin is configured in backend/gateway CORS settings.</p></div>
+                <div class="challenge-item"><h3 class="challenge-title">User Service</h3><p class="challenge-text">Responsible for registration, login, JWT generation, authentication, and user/profile operations. Protected backend operations use authenticated identity rather than trusting arbitrary client-supplied user IDs.</p></div>
                 <div class="challenge-item"><h3 class="challenge-title">Task Service</h3><p class="challenge-text">Owns tasks, bids, task lifecycle rules, and freelancer assignment. When a client accepts a bid, the task is assigned to the selected freelancer, changes to IN_PROGRESS, and a BID_ACCEPTED event is published.</p></div>
-                <div class="challenge-item"><h3 class="challenge-title">Payment Service</h3><p class="challenge-text">Consumes accepted-bid events, creates escrow transactions, generates PayHere payment initiation parameters, validates payment callbacks, moves successful payments to HELD, and supports authorized release to RELEASED.</p></div>
-                <div class="challenge-item"><h3 class="challenge-title">Notification Service</h3><p class="challenge-text">A separate Node.js service was integrated for event-based notification persistence. It forms part of the broader service architecture, although the core demonstrated workflow focuses on User, Task, and Payment services.</p></div>
+                <div class="challenge-item"><h3 class="challenge-title">Payment Service</h3><p class="challenge-text">Consumes accepted-bid events, creates escrow transactions, generates PayHere checkout parameters, validates payment callbacks, moves successful payments to HELD, and supports authorized release to RELEASED.</p></div>
+                <div class="challenge-item"><h3 class="challenge-title">Notification Service</h3><p class="challenge-text">A separate Node.js service is part of the wider architecture for notification-related functionality. The core demonstrated workflow focuses on User, Task, and Payment services.</p></div>
+                <div class="challenge-item"><h3 class="challenge-title">AWS CI/CD Workflow (In Progress)</h3><p class="challenge-text">The planned workflow connects source changes to CodePipeline, uses CodeBuild to build Docker images, pushes images to Amazon ECR, and then updates the running services on EC2. The deployment stage is not described as complete until an end-to-end pipeline run has succeeded.</p></div>
             </section>
 
             <section class="project-section">
                 <h2 class="section-heading">Challenges & Solutions</h2>
                 <div class="challenge-item"><h3 class="challenge-title">Reducing Coupling Between Task and Payment Services</h3><p class="challenge-text"><strong>Challenge:</strong> Direct REST communication would make bid acceptance more dependent on immediate Payment Service availability.<br><br><strong>Solution:</strong> Implemented asynchronous Redis event communication. Task Service publishes BID_ACCEPTED and Payment Service independently consumes the event to create the pending escrow transaction.</p></div>
-                <div class="challenge-item"><h3 class="challenge-title">Consistent Authentication Across Services</h3><p class="challenge-text"><strong>Challenge:</strong> Multiple services needed to validate the same application JWTs consistently.<br><br><strong>Solution:</strong> Configured a shared sufficiently strong JWT signing secret for the relevant backend services and kept application JWT validation within the services rather than relying on Kong to issue the application's authentication tokens.</p></div>
-                <div class="challenge-item"><h3 class="challenge-title">Container Networking & Database Configuration</h3><p class="challenge-text"><strong>Challenge:</strong> Microservices cannot use localhost to reach databases or other containers because localhost refers to the current container.<br><br><strong>Solution:</strong> Used Docker Compose/Kubernetes service names such as postgres, redis, user-service, and payment-postgres as network hostnames and configured service-specific environment variables.</p></div>
-                <div class="challenge-item"><h3 class="challenge-title">Persistent Database Storage</h3><p class="challenge-text"><strong>Challenge:</strong> Database information must survive container or pod recreation.<br><br><strong>Solution:</strong> Docker Compose uses named volumes such as postgres_data and payment-pgdata, while Kubernetes uses PersistentVolumeClaims to decouple persistent data from the lifecycle of database containers/pods.</p></div>
-                <div class="challenge-item"><h3 class="challenge-title">Automating Repeatable Builds</h3><p class="challenge-text"><strong>Challenge:</strong> Building several microservices and their Docker images manually is repetitive and error-prone.<br><br><strong>Solution:</strong> Added a Jenkins pipeline that checks out source code, runs Maven builds for the Spring Boot services, generates JAR artifacts, and builds the Docker images. Deployment is intentionally kept separate/manual in the current implementation.</p></div>
+                <div class="challenge-item"><h3 class="challenge-title">Consistent Authentication Across Services</h3><p class="challenge-text"><strong>Challenge:</strong> Multiple services needed to validate application JWTs consistently.<br><br><strong>Solution:</strong> Configured a shared strong JWT signing secret for relevant backend services and kept application JWT validation within the services rather than relying on Kong to issue application tokens.</p></div>
+                <div class="challenge-item"><h3 class="challenge-title">Secure HTTPS Access to an EC2 Backend</h3><p class="challenge-text"><strong>Challenge:</strong> A Vercel-hosted HTTPS frontend cannot reliably call an HTTP-only backend because browsers block mixed-content requests.<br><br><strong>Solution:</strong> Configured a DuckDNS hostname for the EC2 Elastic IP and set up Nginx with a Let's Encrypt certificate so the public API can be accessed over HTTPS.</p></div>
+                <div class="challenge-item"><h3 class="challenge-title">Container Networking & Database Configuration</h3><p class="challenge-text"><strong>Challenge:</strong> Containers cannot use localhost to reach other containers because localhost refers to the current container.<br><br><strong>Solution:</strong> Used Docker Compose service names such as postgres, redis, user-service, and payment-postgres as network hostnames and configured service-specific environment variables.</p></div>
+                <div class="challenge-item"><h3 class="challenge-title">Repeatable Builds and Cloud Deployment</h3><p class="challenge-text"><strong>Challenge:</strong> Building several microservices and publishing their Docker images manually is repetitive and error-prone.<br><br><strong>Solution:</strong> Existing local Jenkins automation builds Spring Boot JARs and Docker images. AWS CodeBuild, ECR, and CodePipeline are being configured to move the build and deployment workflow into AWS.</p></div>
             </section>
 
             <section class="project-section">
@@ -110,10 +125,13 @@
                     <li>Learned the practical differences between synchronous REST communication and asynchronous event-driven communication using Redis.</li>
                     <li>Implemented stateless JWT-based authentication across a distributed backend architecture.</li>
                     <li>Gained hands-on experience with Dockerfiles, Docker Compose networking, environment configuration, and persistent named volumes.</li>
-                    <li>Deployed a multi-service backend to Kubernetes and worked with namespaces, Deployments, Services, pods, port forwarding, health probes, and PersistentVolumeClaims.</li>
-                    <li>Implemented a Jenkins CI pipeline combining GitHub source control, Maven builds, JAR artifacts, and Docker image creation.</li>
-                    <li>Understood the distinction between Continuous Integration and fully automated Continuous Deployment; the current project automates builds while Kubernetes deployment remains manual.</li>
-                    <li>Practiced debugging distributed-system issues across gateways, service authentication, container networking, database connectivity, and Kubernetes configuration.</li>
+                    <li>Hosted the frontend on Vercel and backend services on AWS EC2, with Nginx, DuckDNS, and Let's Encrypt providing a public HTTPS API endpoint.</li>
+                    <li>Used Kong as a central API gateway for routing and rate limiting.</li>
+                    <li>Implemented a local Jenkins CI pipeline combining GitHub source control, Maven builds, JAR artifacts, and Docker image creation.</li>
+                    <li>Started configuring AWS CodeBuild, Amazon ECR, and CodePipeline for cloud-based image builds and deployment automation.</li>
+                    <li>Understood the distinction between Continuous Integration and fully automated Continuous Deployment; AWS deployment automation remains in progress until verified end to end.</li>
+                    <li>Planned a future migration from PostgreSQL containers on EC2 to Amazon RDS for PostgreSQL.</li>
+                    <li>Practiced debugging distributed-system issues across gateways, service authentication, CORS, TLS certificates, container networking, and database connectivity.</li>
                 </ul>
             </section>
 
@@ -121,6 +139,8 @@
                 <h2 class="section-heading">Project Links</h2>
                 <div class="project-links">
                     <a href="https://github.com/Niduka292/TaskBridge" class="project-link-btn" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+                    <a href="https://task-bridge-one.vercel.app/" class="project-link-btn" target="_blank" rel="noopener noreferrer">Live Frontend</a>
+                    <a href="https://task-bridge.duckdns.org" class="project-link-btn" target="_blank" rel="noopener noreferrer">Backend HTTPS Endpoint</a>
                 </div>
             </section>
         </div>
