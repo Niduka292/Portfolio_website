@@ -3,7 +3,7 @@ import Header from "./components/Header.js?v=portfolio-9"
 import Footer from "./components/Footer.js"
 import Contact from "./components/Contact.js?v=gmail-1"
 import About from "./components/About.js?v=portfolio-5"
-import Projects from "./components/Projects.js?v=toolkit-3"
+import Projects from "./components/Projects.js?v=tech-2"
 import Volunteer from "./components/Volunteer.js?v=volunteer-details-2"
 import Certifications from "./components/Certifications.js?v=portfolio-5"
 import { createApp } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";

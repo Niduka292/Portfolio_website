@@ -299,6 +299,8 @@ input, textarea { background: #090b0e; }
   line-height: 1.5;
   max-width: 100%;
 }
+.project-tags { margin: 14px 0 18px; gap: 8px; }
+.project-tags .academic-tag { padding: 5px 11px; font-size: 12px; }
 @media (prefers-reduced-motion: reduce) {
   .split-text-letter { animation: none; opacity: 1; transform: none; }
 }

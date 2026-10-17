@@ -1,4 +1,4 @@
-import projectsData from "./projects-data.js";
+import projectsData from "./projects-data.js?v=tech-2";
 import techStackData from "./tech-stack-data.js?v=toolkit-3";
 
 const Projects = {
@@ -85,6 +85,9 @@ const Projects = {
             <div class="project-description">
               <p>${p.description}</p>
             </div>
+            <ul class="academic-tags project-tags">
+              ${(p.tech || []).map(t => `<li class="academic-tag">${t}</li>`).join("")}
+            </ul>
             <a href="${p.link}" class="view-details">
               <span>View Details</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi-bi-arrow-right" viewBox="0 0 16 16">
