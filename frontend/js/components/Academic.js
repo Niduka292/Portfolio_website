@@ -3,11 +3,16 @@ export default {
         <div class="section-title"><h2>Academic background</h2></div>
         <div class="academic-grid">
             <article class="academic-card">
-                <div class="academic-heading">
-                    <h3>BSc(Hons) in Computer Science</h3>
-                    <span class="academic-period">2024 - present</span>
+                <div class="academic-header">
+                    <img class="academic-logo" src="assets/uni-logo.png" alt="University of Sri Jayewardenepura logo">
+                    <div class="academic-info">
+                        <div class="academic-heading">
+                            <h3>BSc(Hons) in Computer Science</h3>
+                            <span class="academic-period">2024 - present</span>
+                        </div>
+                        <p class="academic-institution">University of Sri Jayewardenepura</p>
+                    </div>
                 </div>
-                <p class="academic-institution">University of Sri Jayewardenepura</p>
                 <ul class="academic-tags">
                     <li class="academic-tag">Object Oriented Programming</li>
                     <li class="academic-tag">Database Management</li>
@@ -22,11 +27,16 @@ export default {
                 </ul>
             </article>
             <article class="academic-card">
-                <div class="academic-heading">
-                    <h3>G.C.E Advanced Level</h3>
-                    <span class="academic-period">2020 - 2022</span>
+                <div class="academic-header">
+                    <img class="academic-logo" src="assets/school-logo.png" alt="Royal College logo">
+                    <div class="academic-info">
+                        <div class="academic-heading">
+                            <h3>G.C.E Advanced Level</h3>
+                            <span class="academic-period">2020 - 2022</span>
+                        </div>
+                        <p class="academic-institution">Royal College, Colombo 07</p>
+                    </div>
                 </div>
-                <p class="academic-institution">Royal College, Colombo 07</p>
                 <ul class="academic-tags">
                     <li class="academic-tag">Chemistry - B</li>
                     <li class="academic-tag">Mathematics - C</li>
