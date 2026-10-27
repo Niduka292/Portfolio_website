@@ -6,6 +6,7 @@ export default [
     { title: 'AWS Academy Graduate - Cloud Foundations', issuer: 'AWS Academy', url: 'https://www.credly.com/badges/0873fdf2-e296-4986-a90a-72e2e50eef75/public_url' },
     { title: 'AWS Academy Graduate - Microservices and CI/CD Pipeline Builder', issuer: 'AWS Academy', url: 'https://www.credly.com/badges/80096d12-d23b-4339-8813-29e76c3dff44/public_url' },
     { title: 'AWS Academy Graduate - Cloud Security Builder', issuer: 'AWS Academy', url: 'https://www.credly.com/badges/4771a403-14cd-4603-9ece-f141b393ca71/public_url' },
-    { title: 'Getting Started with Cisco Packet Tracer', issuer: 'Cisco Networking Academy', url: 'https://drive.google.com/file/d/11I8XeFwPf0lD4GEHduGj-vouMsqfcFQA/view' }
+    { title: 'Getting Started with Cisco Packet Tracer', issuer: 'Cisco Networking Academy', url: 'https://drive.google.com/file/d/11I8XeFwPf0lD4GEHduGj-vouMsqfcFQA/view' },
+    { title: 'Networking Basics', issuer: 'Cisco Networking Academy', url: 'https://www.credly.com/badges/666d679c-1131-4f62-bbbe-d11b16129517/linked_in_profile' }
 
 ];

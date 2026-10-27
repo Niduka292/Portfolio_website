@@ -21,7 +21,7 @@ const Volunteer = {
               <div class="role-title-group">
                 <h4 class="volunteer-role">Member - Web Development committee - J'puraXtreme 3.0</h4>
                 <p class="volunteer-location">Organized by the IEEE CS Student Branch Chapter - University of Sri Jayewardenepura</p>
-                <p class="volunteer-org"><time datetime="2026-05">May 2026</time> - Present</p>
+                <p class="volunteer-org"><time datetime="2026-05">May 2026</time> - <time datetime="2026-10">Oct 2026</time></p>
               </div>
             </div>
             <span class="volunteer-tag dev-tag">Web Dev</span>
@@ -46,7 +46,7 @@ const Volunteer = {
               <div class="role-title-group">
                 <h4 class="volunteer-role">Member - Programming and Web development committee - Beauty of Cloud 2.0</h4>
                 <p class="volunteer-location">Organized by the IEEE CS Student Branch Chapter - University of Sri Jayewardenepura</p>
-                <p class="volunteer-org"><time datetime="2026-04">Apr 2026</time> - Present</p><p class="volunteer-location">Nugegoda, Western Province, Sri Lanka</p>
+                <p class="volunteer-org"><time datetime="2026-04">Apr 2026</time> - <time datetime="2026-10">Oct 2026</time> </p><p class="volunteer-location">Nugegoda, Western Province, Sri Lanka</p>
               </div>
             </div>
             <span class="volunteer-tag dev-tag">Web Dev</span>
